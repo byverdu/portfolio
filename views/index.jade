@@ -1,0 +1,58 @@
+extends layout
+
+block content
+	include header
+
+	- if (messages.info)
+		.message.info
+			span= messages.info
+	- if (messages.error)
+		.message.error
+			span= messages.error
+
+	.pageWidth
+		section.content
+			each web in data
+				a(href=web.url, alt=web.id+" website")
+					div(class="circle " +web.id)
+						.hoverInfo Hover me !
+						.title
+							h5= web.title
+						.techs
+							ul
+								each tech in web.techs
+									li= tech
+						div(class= web.id+"Tooltip")
+
+	section.content
+		each web in data
+			a(href=web.url, alt=web.id+" website")
+				div(class="circle " +web.id)
+					.hoverInfo Hover me !
+					.title
+						h5= web.title
+					.techs
+						ul
+							each tech in web.techs
+								li= tech
+					div(class= web.id+"Tooltip")
+
+	footer
+		.message
+			p #{message}
+		section.about
+			h2 About me
+
+			p Hello World this is Albert a Spaniard based in London who is a Junior Web Developer that loves spend time coding the web applying all the tecniques that I find in Twitter.
+
+			p My life changed when I read my first line of code, it was only HTML but since then is keeping me really busy. I believe that everybody should know how to code.
+
+		form(id="sayHello", method="post", action="/")
+			h5 Say hello to Albert
+			label Email:
+			input(name="email",type="email", placeholder="Email@domain.com")
+			label Message:
+			textarea(name="message",placeholder="Message")
+			button(type="submit") Send
+
+	include footer

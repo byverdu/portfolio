@@ -1,0 +1,59 @@
+// Tooltips
+
+.makersTooltip::after{
+	@include set_bubble_tooltip('New design for the Makers Academy employers page, psd file conversion into a functional web page using Sass.');
+}
+
+.twitterTooltip::after{
+	@include set_bubble_tooltip('Clone of Twitter.com feed page as close as possible. You can even post a Tweet!!')
+}
+
+.bookTooltip::after{
+	@include set_bubble_tooltip('A simple bookmark manager with the ability to store users in a database with his tags and links.')
+}
+
+.ergosTooltip::after{
+	@include set_bubble_tooltip('Elderly home in Barcelona, web design and coding, web hosting, server maintenance.')
+}
+
+.zooTooltip::after{
+	@include set_bubble_tooltip('ZooPlanet! a place where children can take a look on animal pictures, get some basic information and the sound that they make.')
+}
+
+.shopListTooltip::after{
+	@include set_bubble_tooltip('Shared Shopping List! an app that will allow you to share a list.')
+}
+
+.nextTooltip::after{
+	@include set_bubble_tooltip('Some project JavaScript related, of course!')
+}
+
+.circle:hover .makersTooltip::after,
+.circle:hover .twitterTooltip::after,
+.circle:hover .bookTooltip::after,
+.circle:hover .ergosTooltip::after,
+.circle:hover .zooTooltip::after,
+.circle:hover .shopListTooltip::after,
+.circle:hover .nextTooltip::after,{
+	visibility: visible;
+}
+
+.hoverInfo{
+	position: absolute;
+	top: -66px;
+	left: 89px;
+	box-shadow: 0 0 2px;
+	padding: 5px;
+	background: white;
+	color: $red_color;
+}
+
+.hoverInfo:after{
+	content: '';
+	position: absolute;
+	left: 18px;
+	top: 34px;
+	border-top: 15px solid $red_color;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+}

@@ -1,0 +1,162 @@
+// Vars ans mixins
+
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300);
+ 
+$yellow_color: RGBA(231, 217, 116, 1);
+$black_color: RGBA(42, 46, 50, 1);
+$red_color:  RGBA(194, 46, 79, 1);
+$green_color: RGBA(166, 204, 196, 1);
+
+html{
+  background-color: $black_color;
+}
+
+body {
+	font-family: 'Oswald', sans-serif;
+  background: url(../img/back.png);
+}
+
+.pageWidth{
+  width: 960px;
+  margin: 0 auto;
+}
+
+// Half top red circle
+@mixin titleAfter(){
+	&:after{
+		content: ' ';
+		width: 245px;
+		border-bottom: 130px solid transparent;
+		position: absolute;
+		margin-left: 2px;
+		border-radius: 50%;
+		margin-top: -121px;
+		border-top: 90px solid RGBA(194, 46, 79, 0.9);
+		z-index: -9;
+	}
+}
+
+// Half bottom red circle
+@mixin techAfter(){
+	&:after{
+		content: ' ';
+		width: 235px;
+		border-bottom: 57px solid RGBA(194, 46, 79, 0.9);
+		position: absolute;
+		margin-left: -117px;
+		border-radius: 50%;
+		margin-top: -234px;
+		border-top: 150px solid transparent;
+		z-index: -9;;
+		
+	}
+}
+
+// Changing background circle on hover
+@mixin hoverCircle($imgName){
+	background: url($imgName) no-repeat center;
+	background-size: cover;
+	filter: grayscale(0.9)
+}
+
+// Tooltip creation
+@mixin set_bubble_tooltip($content){
+  
+  visibility:   hidden;
+  content:      $content;
+	transition:   visibility 0s ease-in 0.5s;
+	position:     absolute;
+	top: 250px;
+  
+  background-color: RGBA(194, 46, 79, 1); 
+  font-size:        20px;
+  text-align: justify;
+	padding:          7px;
+	border-radius:    11px;
+	display: block;
+	color: white;
+	font-weight: 100;
+	font-size: 18px;
+	letter-spacing: 1px;
+}
+
+@mixin buildMessage(){
+	position: relative;
+  z-index: 1;
+  padding: 12px;
+  border-radius: 10px;
+  color: white;
+  width: 180px;
+	text-align: center;
+
+  &:after{
+    content: '';
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    position: absolute;
+    left: 309px;
+    top: 7px;
+  }
+}
+
+// Extra css rules/helpers non related with main sections
+
+.message{
+  @include buildMessage()
+}
+
+.info{
+  background: $green_color;
+  top: 200px;
+  left: 43%;
+}
+
+.error{
+  @include buildMessage();
+  padding: 3px;
+  left: 50px;
+
+  background: RGBA(194, 46, 79, 1);
+  
+
+  &:after{
+    border-bottom: 15px solid RGB(194, 46, 79);
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    position: absolute;
+    left: 45%;
+    top: -30px;
+  }
+
+  &:nth-child(even){
+    margin-top: 20px;
+  }
+}
+
+
+// Css fallback when js is disabled
+form *:invalid{
+  border: 1px solid red;
+}
+
+form *:valid:not(button){
+  border: 1px solid green;
+}
+
+
+@-moz-document url-prefix() { 
+
+  .title:after {
+    width: 250px !important;
+    border-bottom: 185px solid transparent !important;
+    border-top: 77px solid rgba(194, 46, 79, 0.9) !important;
+    margin-left: 0 !important;
+  }
+
+  .next{
+		background:  inherit;
+	}
+}
+
+
+

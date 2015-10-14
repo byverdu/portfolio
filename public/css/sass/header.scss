@@ -1,0 +1,66 @@
+// Header Styles
+
+header{
+	position: fixed;
+	width: 100%;
+	height: auto;
+	background: $black_color;
+	top: 0;
+	left: 0;
+	border-bottom: 4px solid $yellow_color;
+	z-index: 1;
+
+	nav{
+		width: 70%;
+		margin: auto;
+
+		ul{
+			position: relative;
+			top: 35px;
+			left: 165px;
+			list-style: none;
+
+			li{
+				display: inline-block;
+				margin: 1px;
+				width: 40px;
+			}
+		}
+	
+		h1,h3{
+			color: $yellow_color;
+		}
+
+		h1{
+			float: left;
+			margin-left:20%; 
+		}
+
+		h3,ul{
+			float: right;
+		}
+	}
+
+}
+
+.mySelf{
+	background-image: url(../img/me_sketch.jpg);
+	background-size: 130px 130px;
+	width: 100px;
+	height: 100px;
+	background-position: 236px -30px;
+	border: 4px solid $yellow_color;
+	border-radius: 50%;
+	position: absolute;
+	top: 15px;
+}
+
+
+:fullscreen a {
+    transition: transform 1s;
+}
+
+
+
+
+

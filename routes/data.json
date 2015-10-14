@@ -1,0 +1,69 @@
+{
+	"webs":[
+
+		{ "id": "makers",
+			"title": "Makers Academy",
+			"techs": ["Haml", "Sass"],
+			"url": "http://www.makersacademy.com/employers"
+		},
+
+
+		{ "id": "twitter",
+			"title": "Twitter Clone",
+			"techs": ["NodeJS", "CSS3" ,"jQuery"],
+			"url": "http://twitter.byverdu.es/"
+		},
+
+		{ "id": "book",
+			"title": "BookMark Manager",
+			"techs": ["Sinatra","Sass","SQL"],
+			"url": "http://byverdu-bookmark.herokuapp.com/"
+		},
+
+		{ "id": "ergos",
+			"title": "Ergos",
+			"techs": ["jQuery","MustacheJS"],
+			"url": "http://residencia-geriatrica-ergos.com/"
+		},
+
+		{ "id": "zoo",
+			"title": "Zoo planet",
+			"techs": ["NodeJS","Jade","Stylus"],
+			"url": "http://zoo.byverdu.es/"
+		},
+
+		{ "id": "shopList",
+			"title": "Shared List",
+			"techs": ["NodeJS"],
+			"url": "http://list.byverdu.es/"
+		},
+
+		{
+			"id": "next",
+			"title": "The next one",
+			"techs": ["NodeJS","Angular"],
+			"url": ""
+		}
+	],
+
+	"icons":[
+
+		{	"url": "https://github.com/byverdu/",
+			"src": "img/github.svg",
+			"alt": "github"
+		},
+		{	"url": "https://twitter.com/byverdu",
+			"src": "img/twitter.svg",
+			"alt": "twitter"
+		},
+		{	"url": "http://byverdu.github.io/",
+			"src": "img/world.svg",
+			"alt": "blog"
+		},
+		{	"url": "#sayHello",
+			"src": "img/mail.svg",
+			"alt": "mail"
+		}
+
+	]
+}

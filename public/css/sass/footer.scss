@@ -1,0 +1,59 @@
+// Footer styles
+
+footer{
+	width: 100%;
+	background: $black_color;
+	border-top: 4px solid $yellow_color;
+	font-weight: 100;
+	letter-spacing: 1px;
+	font-size: 14px;
+
+	.about{
+
+		width: 50%;
+		text-align: justify;
+		color: white;
+		margin: 3% 3% 0;
+		line-height: 25px;
+		letter-spacing: 2px;
+		float: left;
+		h2{
+			color: $yellow_color;
+		}
+		pre{
+			white-space: pre-wrap;;
+		}
+	}
+
+	form{
+		float: right;
+		position: relative;
+		width: 20%;
+		right: 6%;
+		top: 20px;
+		margin-bottom: 30px;
+
+		label,h5{
+			color: white;
+		}
+
+		input,textarea,button{
+			color: black;
+			display: block;
+			width: 80%;
+			margin: 15px auto;
+
+		}
+
+		button{
+			height: 28px;
+
+			&:hover{
+			background: $yellow_color;
+			border: 1px solid $yellow_color;
+			}
+		button:hover{
+			background: $yellow_color;
+		}
+	}
+}

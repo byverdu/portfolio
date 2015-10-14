@@ -1,0 +1,8 @@
+header
+	nav
+		h1 #{name}
+		.mySelf
+		h3 Junior Web Developer
+		ul
+			each icon in icons
+				li(class="icons") #[a(href=icon.url)#[img(src=icon.src, alt=icon.alt)]]
