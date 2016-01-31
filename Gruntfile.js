@@ -23,12 +23,10 @@ module.exports = function (grunt) {
           'public/css/style.css': 'public/css/sass/style.scss',
           'public/css/safari.css': 'public/css/sass/safari.scss'
         }
-      }
-    },
-
-    autoprefixer:{
-      noDest: {
-        src: 'public/css/style.css' 
+      },
+      options: {
+        noCache: true,
+        sourcemap: 'none'
       }
     },
 
@@ -55,7 +53,7 @@ module.exports = function (grunt) {
         files: [
           'public/css/sass/*.scss'
         ],
-        tasks: ['sass','autoprefixer'],
+        tasks: ['sass'],
         options: {
           livereload: reloadPort
         }
@@ -87,11 +85,10 @@ module.exports = function (grunt) {
         });
     }, 500);
   });
-  
+
   grunt.registerTask('default', [
     'sass',
-    'autoprefixer',
-    'develop', 
+    'develop',
     'watch'
   ]);
 };

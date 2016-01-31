@@ -1,2 +1,8 @@
-.makersTooltip::after, .twitterTooltip::after, .bookTooltip::after, .ergosTooltip::after, .zooTooltip::after, .nextTooltip::after, .hoverInfo {
+.makersTooltip::after,
+.twitterTooltip::after,
+.bookTooltip::after,
+.ergosTooltip::after,
+.zooTooltip::after,
+.nextTooltip::after,
+.hoverInfo {
   display: none; }

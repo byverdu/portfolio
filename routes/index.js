@@ -1,6 +1,9 @@
+'use strict';
+
 var express = require('express');
 var data    = require('./data.json');
 var email   = require('nodemailer');
+var smtpTransport = require('nodemailer-smtp-transport');
 var router  = express.Router();
 
 
@@ -11,24 +14,30 @@ router.get('/', function(request, response) {
   											data: data.webs,
   										  icons: data.icons
   										});
+
 });
 
+console.log(process.env.USER_NAME);
 router.post('/',function(request,response){
 
 	var mailOpts, smtpConfig;
 
-	smtpConfig = email.createTransport('SMTP',{
+  smtpConfig = email.createTransport("SMTP", {
+  service: "Gmail",
+  auth: {
+    XOAuth2: {
+      user: process.env.GMAIL_NAME,
+      clientId: process.env.GMAIL_CLIENT_ID,
+      clientSecret: process.env.GMAIL_CLIENT_SECRET,
+      refreshToken: process.env.GMAIL_REFRESH_TOKEN,
 
-		service: 'Gmail',
-		auth:{
-			user: 'byverdu@gmail.com',
-			pass: process.env.USER_PWD
-		}
-	});
+    }
+  }
+});
 
 	mailOpts = {
 		from: request.body.email,
-		to: 'byverdu@gmail.com',
+		to: process.env.GMAIL_NAME,
 		subject: 'Web form message',
 		html: 'Email: '+request.body.email+'<br> Message:'+request.body.message	};
 
@@ -36,23 +45,11 @@ router.post('/',function(request,response){
 
 		if(error){
 
-			request.flash('error','upsssss!! Somethign went wrong');
+			request.flash('error','upsssss!! Something went wrong');
 
 			response.redirect('/');
 
 			console.log(error);
-		html: 'Email: '+request.body.email+'<br> Message:'+request.body.message	}
-
-	smtpConfig.sendMail(mailOpts,function(error){
-
-
-		if(error){
-
-			request.flash('error','upsssss!! Somethign went wrong')
-
-			response.redirect('/')
-
-			console.log(error)
 
 		} else{
 
@@ -68,5 +65,5 @@ router.post('/',function(request,response){
 
 
 });
-});
+
 module.exports = router;

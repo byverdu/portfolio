@@ -74,7 +74,6 @@ form *:valid:not(button) {
 
   .next {
     background: inherit; } }
-
 header {
   position: fixed;
   width: 100%;
@@ -114,17 +113,6 @@ header {
   border-radius: 50%;
   position: absolute;
   top: 15px; }
-
-
-:-webkit-full-screen a {
-  -webkit-transition: -webkit-transform 1s;
-          transition: transform 1s; }
-
-:-moz-full-screen a {
-  transition: transform 1s; }
-
-:-ms-fullscreen a {
-  transition: transform 1s; }
 
 :fullscreen a {
   transition: transform 1s; }
@@ -180,50 +168,42 @@ header {
         z-index: -9; }
 
 .makers {
-  background: url('../img/makers.jpg') no-repeat center;
+  background: url("../img/makers.jpg") no-repeat center;
   background-size: cover;
-  -webkit-filter: grayscale(0.9);
-          filter: grayscale(0.9); }
+  filter: grayscale(0.9); }
 
 .twitter {
-  background: url('../img/twitter.jpg') no-repeat center;
+  background: url("../img/twitter.jpg") no-repeat center;
   background-size: cover;
-  -webkit-filter: grayscale(0.9);
-          filter: grayscale(0.9); }
+  filter: grayscale(0.9); }
 
 .book {
-  background: url('../img/book.jpg') no-repeat center;
+  background: url("../img/book.jpg") no-repeat center;
   background-size: cover;
-  -webkit-filter: grayscale(0.9);
-          filter: grayscale(0.9); }
+  filter: grayscale(0.9); }
 
 .ergos {
-  background: url('../img/ergos.jpg') no-repeat center;
+  background: url("../img/ergos.jpg") no-repeat center;
   background-size: cover;
-  -webkit-filter: grayscale(0.9);
-          filter: grayscale(0.9); }
+  filter: grayscale(0.9); }
 
 .zoo {
-  background: url('../img/zoo.jpg') no-repeat center;
+  background: url("../img/zoo.jpg") no-repeat center;
   background-size: cover;
-  -webkit-filter: grayscale(0.9);
-          filter: grayscale(0.9); }
+  filter: grayscale(0.9); }
 
 .shopList {
-  background: url('../img/list.png') no-repeat center;
+  background: url("../img/list.png") no-repeat center;
   background-size: cover;
-  -webkit-filter: grayscale(0.9);
-          filter: grayscale(0.9); }
+  filter: grayscale(0.9); }
 
 .next {
-  background: url('../img/next.jpg') no-repeat center;
+  background: url("../img/next.jpg") no-repeat center;
   background-size: cover;
-  -webkit-filter: grayscale(0.9);
-          filter: grayscale(0.9); }
+  filter: grayscale(0.9); }
 
 .circle:hover {
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0); }
+  filter: grayscale(0); }
 
 footer {
   width: 100%;
@@ -266,7 +246,7 @@ footer {
 
 .makersTooltip::after {
   visibility: hidden;
-  content: 'New design for the Makers Academy employers page, psd file conversion into a functional web page using Sass.';
+  content: "New design for the Makers Academy employers page, psd file conversion into a functional web page using Sass.";
   transition: visibility 0s ease-in 0.5s;
   position: absolute;
   top: 250px;
@@ -283,7 +263,7 @@ footer {
 
 .twitterTooltip::after {
   visibility: hidden;
-  content: 'Clone of Twitter.com feed page as close as possible. You can even post a Tweet!!';
+  content: "Clone of Twitter.com feed page as close as possible. You can even post a Tweet!!";
   transition: visibility 0s ease-in 0.5s;
   position: absolute;
   top: 250px;
@@ -300,7 +280,7 @@ footer {
 
 .bookTooltip::after {
   visibility: hidden;
-  content: 'A simple bookmark manager with the ability to store users in a database with his tags and links.';
+  content: "A simple bookmark manager with the ability to store users in a database with his tags and links.";
   transition: visibility 0s ease-in 0.5s;
   position: absolute;
   top: 250px;
@@ -317,7 +297,7 @@ footer {
 
 .ergosTooltip::after {
   visibility: hidden;
-  content: 'Elderly home in Barcelona, web design and coding, web hosting, server maintenance.';
+  content: "Elderly home in Barcelona, web design and coding, web hosting, server maintenance.";
   transition: visibility 0s ease-in 0.5s;
   position: absolute;
   top: 250px;
@@ -334,7 +314,7 @@ footer {
 
 .zooTooltip::after {
   visibility: hidden;
-  content: 'ZooPlanet! a place where children can take a look on animal pictures, get some basic information and the sound that they make.';
+  content: "ZooPlanet! a place where children can take a look on animal pictures, get some basic information and the sound that they make.";
   transition: visibility 0s ease-in 0.5s;
   position: absolute;
   top: 250px;
@@ -351,26 +331,7 @@ footer {
 
 .shopListTooltip::after {
   visibility: hidden;
-  content: 'Shared Shopping List! an app that will allow you to share a list.';
-  -webkit-transition: visibility 0s ease-in 0.5s;
-          transition: visibility 0s ease-in 0.5s;
-  position: absolute;
-  top: 250px;
-  background-color: RGBA(194, 46, 79, 1);
-  font-size: 20px;
-  text-align: justify;
-  padding: 7px;
-  border-radius: 11px;
-  display: block;
-  color: white;
-  font-weight: 100;
-  font-size: 18px;
-  letter-spacing: 1px; }
-
-
-.nextTooltip::after {
-  visibility: hidden;
-  content: 'Some project JavaScript related, of course!';
+  content: "Shared Shopping List! an app that will allow you to share a list.";
   transition: visibility 0s ease-in 0.5s;
   position: absolute;
   top: 250px;
@@ -385,7 +346,30 @@ footer {
   font-size: 18px;
   letter-spacing: 1px; }
 
-.circle:hover .makersTooltip::after, .circle:hover .twitterTooltip::after, .circle:hover .bookTooltip::after, .circle:hover .ergosTooltip::after, .circle:hover .zooTooltip::after, .circle:hover .shopListTooltip::after, .circle:hover .nextTooltip::after {
+.nextTooltip::after {
+  visibility: hidden;
+  content: "Some project JavaScript related, of course!";
+  transition: visibility 0s ease-in 0.5s;
+  position: absolute;
+  top: 250px;
+  background-color: RGBA(194, 46, 79, 1);
+  font-size: 20px;
+  text-align: justify;
+  padding: 7px;
+  border-radius: 11px;
+  display: block;
+  color: white;
+  font-weight: 100;
+  font-size: 18px;
+  letter-spacing: 1px; }
+
+.circle:hover .makersTooltip::after,
+.circle:hover .twitterTooltip::after,
+.circle:hover .bookTooltip::after,
+.circle:hover .ergosTooltip::after,
+.circle:hover .zooTooltip::after,
+.circle:hover .shopListTooltip::after,
+.circle:hover .nextTooltip::after {
   visibility: visible; }
 
 .hoverInfo {
@@ -414,9 +398,7 @@ footer {
     width: 30%; }
 
   .error {
-    left: -64%; }
- }
-
+    left: -64%; } }
 @media screen and (max-width: 960px) {
   header nav h3 {
     display: none; }
@@ -446,9 +428,7 @@ footer {
     left: 43%; }
 
   .error::after {
-    display: none; }
- }
-
+    display: none; } }
 @media screen and (max-width: 630px) {
   header nav {
     width: 100%; }
@@ -492,9 +472,7 @@ footer {
   @-moz-document url-prefix() {
     .title::after {
       width: 296px !important;
-      border-top: 90px solid rgba(194, 46, 79, 0.9) !important; } }
- }
-
+      border-top: 90px solid rgba(194, 46, 79, 0.9) !important; } } }
 @media screen and (max-width: 450px) {
   .mySelf {
     left: 38%; }
@@ -513,5 +491,4 @@ footer {
     header nav ul {
       top: 12px;
       text-align: none;
-      left: -15px; } }
- }
+      left: -15px; } } }
