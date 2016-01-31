@@ -61,20 +61,11 @@ $(document).ready(function() {
 		$(this).find('.techs,.title').css('visibility', 'hidden');
 		$(this).find('.hoverInfo').remove();
 
-		$('.shopList').addClass('animated flip').show();
-	}, function(){
-		$(this).find('.techs,.title').css('visibility', 'visible');
-	});
-
-	// List effects
-	$('.shopList').hover(function() {
-		$(this).find('.techs,.title').css('visibility', 'hidden');
-		$(this).find('.hoverInfo').remove();
-
 		$('.next').addClass('animated flip').show();
 	}, function(){
 		$(this).find('.techs,.title').css('visibility', 'visible');
 	});
+
 
 	// Next effects
 	$('.next').hover(function() {

@@ -32,12 +32,6 @@
 			"url": "http://zoo.byverdu.es/"
 		},
 
-		{ "id": "shopList",
-			"title": "Shared List",
-			"techs": ["NodeJS"],
-			"url": "http://list.byverdu.es/"
-		},
-
 		{
 			"id": "next",
 			"title": "The next one",
