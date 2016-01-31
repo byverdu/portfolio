@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var flash = require('express-flash');
 var session = require('express-session');
+var FileStore = require('session-file-store')(session);
 
 var routes = require('./routes/index');
 
@@ -25,9 +26,12 @@ app.use(bodyParser.urlencoded({
 
 app.use(cookieParser('keyboard cat'));
 app.use(session({
+  store: new FileStore(),
     secret: 'meatBalls',
-    resave: false,
-    saveUninitialized: true}));
+    resave: true,
+    saveUninitialized: true
+  })
+);
 
 app.use(flash());
 

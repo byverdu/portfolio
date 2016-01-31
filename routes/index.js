@@ -3,17 +3,20 @@
 var express = require('express');
 var data    = require('./data.json');
 var email   = require('nodemailer');
-var smtpTransport = require('nodemailer-smtp-transport');
 var router  = express.Router();
 
 
 /* GET home page. */
 router.get('/', function(request, response) {
-  response.render('index', { title: 'Byverdu',
-  											name: 'Albert Vallverdu',
-  											data: data.webs,
-  										  icons: data.icons
-  										});
+
+  var dataToRender = {
+    title: 'Byverdu',
+    name: 'Albert Vallverdu',
+    data: data.webs,
+    icons: data.icons
+  };
+
+  response.render('index', dataToRender);
 
 });
 
