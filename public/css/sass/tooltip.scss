@@ -1,7 +1,7 @@
 // Tooltips
 
 .makersTooltip::after{
-	@include set_bubble_tooltip('New design for the Makers Academy employers page, psd file conversion into a functional web page using Sass.');
+	@include set_bubble_tooltip('jQuery plugin that modifies default browser styles for the errors found in input fields when submitting a form.');
 }
 
 .twitterTooltip::after{
@@ -9,7 +9,7 @@
 }
 
 .bookTooltip::after{
-	@include set_bubble_tooltip('A simple bookmark manager with the ability to store users in a database with his tags and links.')
+	@include set_bubble_tooltip('Web scrapper that search for lottery results and stores it in a mongo db..')
 }
 
 .ergosTooltip::after{
@@ -17,7 +17,7 @@
 }
 
 .zooTooltip::after{
-	@include set_bubble_tooltip('ZooPlanet! a place where children can take a look on animal pictures, get some basic information and the sound that they make.')
+	@include set_bubble_tooltip('App as a POC used as an example for a post on my blog to explain the MEAN stack')
 }
 
 .shopListTooltip::after{
@@ -25,7 +25,7 @@
 }
 
 .nextTooltip::after{
-	@include set_bubble_tooltip('Some project JavaScript related, of course!')
+	@include set_bubble_tooltip('You can see some other projects that I have done @ Github')
 }
 
 .circle:hover .makersTooltip::after,

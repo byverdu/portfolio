@@ -11,13 +11,13 @@ header{
 	z-index: 1;
 
 	nav{
-		width: 70%;
+		width: 960px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 		margin: auto;
 
 		ul{
-			position: relative;
-			top: 35px;
-			left: 165px;
 			list-style: none;
 
 			li{
@@ -30,29 +30,29 @@ header{
 		h1,h3{
 			color: $yellow_color;
 		}
-
-		h1{
-			float: left;
-			margin-left:20%; 
-		}
-
-		h3,ul{
-			float: right;
-		}
 	}
 
 }
 
+.right-side {
+  text-align: right;
+}
+
+div[class*="side"] {
+  flex-grow: 1;
+}
+
 .mySelf{
 	background-image: url(../img/me_sketch.jpg);
-	background-size: 130px 130px;
-	width: 100px;
-	height: 100px;
+	background-size: 124px 140px;
+	width: 110px;
+	height: 110px;
 	background-position: 236px -30px;
 	border: 4px solid $yellow_color;
 	border-radius: 50%;
 	position: absolute;
-	top: 15px;
+  left: 45%;
+  top: 45px;
 }
 
 

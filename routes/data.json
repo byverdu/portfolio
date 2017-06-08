@@ -2,11 +2,10 @@
 	"webs":[
 
 		{ "id": "makers",
-			"title": "Makers Academy",
-			"techs": ["Haml", "Sass"],
-			"url": "http://www.makersacademy.com/employers"
+			"title": "PrettyFormError",
+			"techs": ["jQuery", "ES6"],
+			"url": "https://byverdu.github.io/prettyFormError/"
 		},
-
 
 		{ "id": "twitter",
 			"title": "Twitter Clone",
@@ -15,28 +14,28 @@
 		},
 
 		{ "id": "book",
-			"title": "BookMark Manager",
-			"techs": ["Sinatra","Sass","SQL"],
-			"url": "http://byverdu-bookmark.herokuapp.com/"
+			"title": "lottoApp",
+			"techs": ["Node","Mongo", "Hapi"],
+			"url": "https://github.com/byverdu/lottoApp-backEnd"
 		},
 
-		{ "id": "ergos",
+    { "id": "ergos",
 			"title": "Ergos",
-			"techs": ["jQuery","MustacheJS"],
+			"techs": ["React","Bootstrap 4.0.0"],
 			"url": "http://residencia-geriatrica-ergos.com/"
 		},
 
 		{ "id": "zoo",
-			"title": "Zoo planet",
-			"techs": ["NodeJS","Jade","Stylus"],
-			"url": "http://zoo.byverdu.es/"
+			"title": "ImdbApp",
+			"techs": ["MEAN stack"],
+			"url": "https://github.com/byverdu/meanStackPost/"
 		},
 
 		{
 			"id": "next",
-			"title": "The next one",
-			"techs": ["NodeJS","Angular"],
-			"url": ""
+			"title": "More @ Github",
+			"techs": ["JS <3"],
+			"url": "https://github.com/byverdu"
 		}
 	],
 

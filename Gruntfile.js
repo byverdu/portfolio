@@ -44,7 +44,7 @@ module.exports = function (grunt) {
         tasks: ['develop', 'delayed-livereload']
       },
       js: {
-        files: ['public/js/*.js','routes/*.js','Gruntfile.js'],
+        files: ['public/js/*.js','routes/*','Gruntfile.js'],
         options: {
           livereload: reloadPort
         }

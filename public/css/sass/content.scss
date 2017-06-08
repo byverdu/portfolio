@@ -1,7 +1,7 @@
 // Styles for content section
 
 .content{
-	padding-top: 190px;
+	padding-top: 240px;
 	width: 100%;
 	margin: auto;
 	position: relative;
@@ -15,6 +15,7 @@
 		display: inline-block;
 		margin: 0 0 120px 30px;
 		color: white;
+    position: relative;
 
 		.title{
 
@@ -50,7 +51,7 @@
 
 
 .makers{
-	@include hoverCircle('../img/makers.jpg');
+	@include hoverCircle('../img/demo.png');
 }
 
 .twitter{
@@ -58,7 +59,7 @@
 }
 
 .book{
-	@include hoverCircle('../img/book.jpg');
+	@include hoverCircle('../img/lotto.jpeg');
 }
 
 .ergos{
@@ -66,7 +67,7 @@
 }
 
 .zoo{
-	@include hoverCircle('../img/zoo.jpg');
+	@include hoverCircle('../img/imdb.jpeg');
 }
 
 .shopList{
