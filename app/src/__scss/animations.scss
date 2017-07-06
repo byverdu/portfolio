@@ -1,0 +1,57 @@
+// animations
+@keyframes redNeon {
+	0% {
+		text-shadow: 0 0 0 #FF0008;
+	}
+	50% {
+		text-shadow: 0 0 20px #FF0008, 0 0 10px #F8F9E8;
+	}
+	100% {
+		text-shadow: 0 0 20px #BD3649, 0 0 10px #F8F9E8;
+	}
+}
+
+@keyframes whiteNeon {
+	0% {
+		text-shadow: 0 0 0 rgb(255,255,255);
+	}
+	100% {
+		text-shadow: 0 0 22px rgb(255,255,255);
+	}
+}
+
+@keyframes stopBlink {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes curtainIn {
+	0% {
+    height: 300px;
+	}
+	100% {
+    height: 0px;
+	}
+}
+
+@keyframes curtainOut {
+	0% {
+    height: 0px;
+	}
+	100% {
+    height: 300px;    
+	}
+}
