@@ -1,0 +1,30 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "my personal portfolio",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -e js,html --exec babel-node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byverdu/portfolio.git"
+  },
+  "author": "@byverdu <byverdu@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/byverdu/portfolio/issues"
+  },
+  "homepage": "https://github.com/byverdu/portfolio#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.24.1"
+  },
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
