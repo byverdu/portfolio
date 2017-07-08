@@ -1,8 +1,8 @@
 export function lettering( htmlElement ) {
   const splitText = ( sentence ) => {
-  return sentence.split( ' ' )
-    .map( item => item.split( '' ));
-};
+    return sentence.split( ' ' )
+      .map( item => item.split( '' ));
+  };
 
 const createElements = ( letters ) => {
 		let count = 0;
