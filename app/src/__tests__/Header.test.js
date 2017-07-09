@@ -2,7 +2,6 @@ import React from 'react';
 import Header from '../components/header';
 import Nav from '../components/navigation';
 import { shallow, mount } from 'enzyme';
-import { lettering } from '../utils';
 import chai from 'chai';
 import sinon from 'sinon';
 
@@ -16,7 +15,7 @@ beforeEach(() => {
 });
 
 
-describe( 'Header content', () => {
+describe( 'Header lifecycle', () => {
   it( 'calls componentDidMount', () => {
     sinon.spy( Header.prototype, 'componentDidMount' );    
     mount( <Header /> );
