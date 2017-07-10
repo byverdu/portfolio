@@ -24,16 +24,6 @@ beforeEach(() => {
     mounted = mount( <Tile data={ data } /> );
 });
 
-
-xdescribe( 'Tile lifecycle', () => {
-  it( 'calls componentDidMount', () => {
-    sinon.spy( Tile.prototype, 'componentDidMount' );    
-    mount( <Tile /> );
-    expect( Tile.prototype.componentDidMount.calledOnce )
-      .to.equal( true );
-  });
-})
-
 describe( 'Tile content', () => {
   it( 'contains a <div> element', () => {
     expect( wrapper.html()).to.contain( '</div>' );
