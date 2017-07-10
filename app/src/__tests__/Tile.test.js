@@ -16,12 +16,10 @@ const data = {
     ]
 	};
 let wrapper;
-let mounted;
 
 
 beforeEach(() => {
     wrapper = shallow( <Tile data={ data } /> );
-    mounted = mount( <Tile data={ data } /> );
 });
 
 describe( 'Tile content', () => {

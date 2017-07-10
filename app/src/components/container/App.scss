@@ -1,30 +1,20 @@
-.App {
-  text-align: center;
-}
+@import '../../__scss/colors.scss';
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
+.portfolio {
+	// Global styles
+	background: $purple;
+	box-shadow: -2px 0 5px $pink, 2px 0 5px $pink;
+	color: $white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	max-width: 1200px;
+	margin: 0 auto;
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-  font-family: 'Bubbler One'
-}
-
-.App-intro {
-  font-family: 'Monoton';
-  font-size: large;
-}
-
-h3 {
-  font-family: 'Fira Mono'
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+	.wrapper {
+		padding: 0 45px;
+	}
+	.section {
+		margin: 40px 0;
+	}
 }

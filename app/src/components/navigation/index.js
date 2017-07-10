@@ -5,7 +5,7 @@ export default class Nav extends Component {
   render() {
     return(
       <nav>
-        <ul>
+        <ul className="portfolio__header--nav">
           { navLinkBuilder }
         </ul>
       </nav>
