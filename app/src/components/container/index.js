@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from '../header';
 import About from '../about';
+import Content from '../content';
 
 export default class App extends Component {
   render() {
@@ -10,10 +11,10 @@ export default class App extends Component {
 				<Header />
 				<section className="wrapper">
 					<About />
+					<Content />
 				</section>
 			</main>
     );
-					// <Content />
 					// <Contact />
 					// <Footer />				
   }

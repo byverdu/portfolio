@@ -17,12 +17,12 @@ body {
 }
 
 .block {
-  visibility: visible;
-  opacity: 1;
+  visibility: visible !important;
+  opacity: 1 !important;
   transition: all 4s ease;
 }
 .hide {
-  visibility: hidden;
-  opacity: 0;
+  visibility: hidden !important;
+  opacity: 0 !important;
   transition: all 1s ease;
 }

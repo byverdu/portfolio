@@ -51,13 +51,13 @@ export default class Tile extends Component {
     } = this.state.data;
     
     return(
-      <div className={ baseClass + '--tile' }>
+      <div ref="tile" className={ baseClass + '--tile' }>
         <a href={ href }>
           <div
             onMouseEnter={this.handleMouseEnter}
             onMouseLeave={this.handleMouseLeave}
             ref="wrapper"
-            className={ baseClass + '--wrapper' }
+            className={ baseClass + '--tile-wrapper' }
           >
             <h4
               ref="title"
@@ -81,6 +81,9 @@ export default class Tile extends Component {
               { techTilesBuilder( techs ) }
             </div>
           </div>
+          <div
+            ref="curtain"
+            className={ baseClass + "--tile-bg tile-" + name}></div>
         </a>
       </div>
     );
