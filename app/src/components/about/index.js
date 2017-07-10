@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { printContent } from '../../utils';
-
+import './About.css';
 export default class About extends Component {
   componentDidMount() {
     const timers = [ 2000, 15000, 28000, 35000 ];
@@ -20,7 +20,7 @@ export default class About extends Component {
 				<div
           ref="content"
           className={ baseClass + '--content'}>
-            <div className={ baseClass + '--content-item ' + baseClass + '--content-0'}>albert</div>
+            <div className={ baseClass + '--content-item ' + baseClass + '--content-0'}></div>
         </div>
       </section>
     )
