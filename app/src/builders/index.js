@@ -1,6 +1,6 @@
 import React from 'react';
 import * as data from '../data';
-import Tile from '../../src/components/tile';
+import Tile from '../../src/components/elements/tile';
 
 const navLinkBuilder = data.navLinksData.map(( item, index ) => {
   const baseClass = 'portfolio__header--nav-';

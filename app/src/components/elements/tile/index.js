@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { techTilesBuilder } from '../../builders';
+import { techTilesBuilder } from '../../../builders';
 
 export default class Tile extends Component {
   constructor( props ) {
