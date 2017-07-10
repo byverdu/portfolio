@@ -8,8 +8,6 @@ const expect = chai.expect;
 let wrapper;
 let mounted;
 
-jest.useFakeTimers();
-
 beforeEach(() => {
     wrapper = shallow( <About /> );
     mounted = mount( <About /> );
