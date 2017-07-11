@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Nav from '../elements/navigation';
+import Nav from '../elements/navigation.js';
 import { lettering } from '../../utils';
 import './Header.css';
 

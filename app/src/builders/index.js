@@ -1,6 +1,7 @@
 import React from 'react';
 import * as data from '../data';
 import Tile from '../../src/components/elements/tile';
+import Input from '../../src/components/elements/input';
 
 const navLinkBuilder = data.navLinksData.map(( item, index ) => {
   const baseClass = 'portfolio__header--nav-';
@@ -52,8 +53,21 @@ const tileBuilder = data.projectsData.map(( item, index ) => {
   );
 });
 
+const formBuilder = data.formData.map(( item, index ) => {
+  const data = {
+    label: item.label, 
+    type: item.type,
+    placeholder: item.placeholder,
+    name: item.name
+  };
+  return(
+    <Input data={data} />
+  )
+});
+
 export {
   navLinkBuilder,
   techTilesBuilder,
-  tileBuilder
+  tileBuilder,
+  formBuilder
 }

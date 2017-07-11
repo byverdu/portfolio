@@ -3,6 +3,7 @@ import './App.css';
 import Header from '../header';
 import About from '../about';
 import Content from '../content';
+import Contact from '../contact';
 
 export default class App extends Component {
   render() {
@@ -12,10 +13,10 @@ export default class App extends Component {
 				<section className="wrapper">
 					<About />
 					<Content />
+					<Contact />
 				</section>
 			</main>
     );
-					// <Contact />
 					// <Footer />				
   }
 }
