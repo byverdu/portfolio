@@ -2,6 +2,7 @@ import React from 'react';
 import * as data from '../data';
 import Tile from '../../src/components/elements/tile';
 import Input from '../../src/components/elements/input';
+import FooterItem from '../../src/components/elements/footeritem';
 
 const navLinkBuilder = data.navLinksData.map(( item, index ) => {
   const baseClass = 'portfolio__header--nav-';
@@ -61,13 +62,26 @@ const formBuilder = data.formData.map(( item, index ) => {
     name: item.name
   };
   return(
-    <Input data={data} />
+    <Input key={ index } data={data} />
   )
+});
+
+const socialBuilder = data.socialIconsData.map(( item, index ) => {
+  const data = {
+    href: item.href,
+    image: item.image
+  }
+  return(
+    <li key={ index }>
+      <FooterItem data={ data } />
+    </li>
+  );
 });
 
 export {
   navLinkBuilder,
   techTilesBuilder,
   tileBuilder,
-  formBuilder
+  formBuilder,
+  socialBuilder
 }

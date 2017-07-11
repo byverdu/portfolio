@@ -4,6 +4,7 @@ import Header from '../header';
 import About from '../about';
 import Content from '../content';
 import Contact from '../contact';
+import Footer from '../footer';
 
 export default class App extends Component {
   render() {
@@ -14,9 +15,9 @@ export default class App extends Component {
 					<About />
 					<Content />
 					<Contact />
+					<Footer />		
 				</section>
 			</main>
     );
-					// <Footer />				
   }
 }

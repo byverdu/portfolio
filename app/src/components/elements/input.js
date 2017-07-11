@@ -13,7 +13,7 @@ export default class Input extends Component {
       label, type, placeholder, name
     } = this.state.data;
     return(
-      <label for={name}>
+      <label htmlFor={name}>
 				<span> {label} </span>
 				<input id={name} type={type} placeholder={placeholder} />
 			</label>
