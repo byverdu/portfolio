@@ -3,12 +3,10 @@
 .portfolio {
 	// Global styles
 	background: $purple;
-	box-shadow: -2px 0 5px $pink, 2px 0 5px $pink;
 	color: $white;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	max-width: 1200px;
 	margin: 0 auto;
 
 	.wrapper {

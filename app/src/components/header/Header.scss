@@ -7,18 +7,54 @@
 			background: $purple;
       display: flex;
       flex-wrap: wrap;
-			justify-content: space-between;
+      flex-direction: column;
 			position: fixed;
-			width: 1200px;
 			z-index: 999;
+			width: 100%;
+
+      .menu {
+        height: 60px;
+        .button {
+          align-self: center;
+          background: transparent;
+          border: 0;
+          display: block;
+          font-size: 1.5rem;
+          height: 40px;
+          letter-spacing: 3px;
+          padding-bottom: 8px;
+          position: absolute;
+          right: 20px;
+          width: 40px;
+        }
+        &-idle {
+          color: $white;
+          outline-color: $white;
+          transform: rotate(90deg);
+          transition: all 2s;          
+        }
+        &-clicked {
+          color: $goldenBtn;
+          outline-color: $goldenBtn;
+          transform: rotate(0deg);
+          transition: all 2s;
+        }
+        &-hidden {
+          display: none;
+          transition: all 2s;          
+        }
+        &-block {
+          display: block;
+          transition: all 2s;          
+        }
+      }
 			
 			&-item {
-			  border-bottom: 1px solid rgba($pink, 0.3);        
+        display: flex;
+				border-bottom: 3px dashed rgba($pink, 0.6);
 				text-align: center;
-				width: 25%;
 				&:hover {
 					background: rgba($black,.2);
-					border-bottom: 3px dashed rgba($pink, 0.6);
 				}
 			}
 			
@@ -43,10 +79,17 @@
 			position: relative;
 			text-align: center;
     	margin: 100px auto 20px auto;
-			width: 670px;
+			// width: 670px;
+      // display: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
 			
 			&-name {
-				font: 3rem 'Monoton', 'Bubbler One', sans-serif;
+				font: 2.5rem 'Monoton', 'Bubbler One', sans-serif;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
 				.group-0 {
 					&:after {
 						@include buildScrew();

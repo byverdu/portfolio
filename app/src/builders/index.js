@@ -8,7 +8,7 @@ const navLinkBuilder = data.navLinksData.map(( item, index ) => {
   const baseClass = 'portfolio__header--nav-';
   return(
     <li
-      className={baseClass + 'item'}
+      className={baseClass + 'item menu-hidden'}
       key={index}>
       <a
         className={baseClass + 'link'}
