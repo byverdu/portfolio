@@ -23,7 +23,7 @@ export default class Header extends Component {
           <h6
             ref="spec"
             className="portfolio__header--title-spec">
-              Web Developer &#123;Javascript&#125; Enthusiast
+              Web Developer &#123;Javascript Enthusiast&#125;
           </h6>
         </div>
       </header>

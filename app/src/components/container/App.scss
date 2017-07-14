@@ -8,11 +8,22 @@
 	flex-direction: column;
 	justify-content: center;
 	margin: 0 auto;
+  min-width: 380px;
 
 	.wrapper {
-		padding: 0 45px;
+    margin: 0 auto;
+    max-width: 1200px;
+		padding: 0 20px;
 	}
 	.section {
 		margin: 40px 0;
 	}
+}
+
+@media screen and (min-width: 600px) {
+  .portfolio {
+    .wrapper {
+      padding: 0;
+    }
+  }
 }

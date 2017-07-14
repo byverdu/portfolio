@@ -5,23 +5,23 @@
 .portfolio__window {
   background: black;
   border-radius: 0 0 5px 5px;
-  box-shadow: 1px 0 2px silver, -1px 0 2px silver;
+  box-shadow: 1px 0 2px $silver, -1px 0 2px $silver;
   color: whitesmoke;
   font-family: 'Fira Mono';
-  min-height: 270px;
+  min-height: 400px;
   position: relative;
   top: 30px;
 
   &:before {
-    border-top: 30px solid silver;    				
+    border-top: 30px solid $silver;    				
     border-radius: 5px 5px 0 0;
-    box-shadow: 0 1px 1px rgba(0,0,0,.5);
     content: "|";
     color: transparent;
     height: 0px;
     position: absolute;
     top: -30px;
-    width: 100%;
+    width: calc(100% + 2px);
+    right: -1px;
   }
 
   &--controls {
@@ -90,5 +90,12 @@
         @include afterAnimation(false);
       }
     }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .portfolio__window {
+    min-height: 270px;
+    max-width: 600px;
   }
 }

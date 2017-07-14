@@ -25,7 +25,7 @@ export default class Nav extends Component {
             <button
               className="button menu-idle"
               onClick={ this.handleClickMenu }
-              ref="btnMenu">||||</button>
+              ref="btnMenu">|||</button>
           </li>
           { navLinkBuilder }
         </ul>
