@@ -19,21 +19,24 @@ const navLinkBuilder = data.navLinksData.map(( item, index ) => {
   );
 });
 
-const techTilesBuilder = ( techData ) => {
-  return techData.map(( item, index ) => {
-    const bgColors = [
+const techTilesBuilder = ( techData, isDesktop ) => {
+  const bgColors = [
     'rgb(254,106,8)',
     'rgb(255,189,46)',
     'rgb(253,96,87)',
     'rgb(7,173,239)',
     'rgb(41,207,66)'
   ];
+  const purple = 'rgb(31,31,69)';
+
+  return techData.map(( item, index ) => {
   const random = Math.floor( Math.random() * bgColors.length );
+  const bg = isDesktop ? {color: bgColors[ random ]} : {color: purple }
     return (
       <span
         key={ index }
         className="tech"
-        style={{color: bgColors[ random ]}}>
+        style={bg}>
         { item }  
       </span>
     );

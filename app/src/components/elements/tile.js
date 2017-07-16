@@ -12,6 +12,7 @@ export default class Tile extends Component {
     this.handleMouseEnter = this.handleMouseEnter.bind( this );
     this.handleMouseLeave = this.handleMouseLeave.bind( this );
     this.getWidthElement = this.getWidthElement.bind( this );
+    this.isDesktop = this.isDesktop.bind( this );
   }
   componentDidMount() {
     this.getWidthElement();
@@ -22,27 +23,35 @@ export default class Tile extends Component {
       window.removeEventListener( 'resize', this.getWidthElement );
   }
 
+  isDesktop() {
+    return document.body.getBoundingClientRect().width >= 750;
+  }
+
   getWidthElement() {
     this.refs.wrapper.style.width = `${this.refs.tile.getBoundingClientRect().width}px`;
   }
 
   handleMouseEnter() {
-		this.refs.text.classList.toggle( 'block' );
-		this.refs.image.classList.toggle( 'block' );
-		this.refs.techs.classList.toggle( 'block' );
-		this.refs.title.classList.toggle( 'hide' );
-		this.refs.curtain.classList.remove( 'curtainOut' );
-		this.refs.curtain.classList.add( 'curtainIn' );
+    if ( this.isDesktop()) {
+      this.refs.text.classList.toggle( 'block' );
+      this.refs.image.classList.toggle( 'block' );
+      this.refs.techs.classList.toggle( 'block' );
+      this.refs.title.classList.toggle( 'hide' );
+      this.refs.curtain.classList.remove( 'curtainOut' );
+      this.refs.curtain.classList.add( 'curtainIn' );
+    }
 	}
 
   handleMouseLeave() {
-		this.refs.text.classList.toggle( 'block' );
-		this.refs.image.classList.toggle( 'block' );
-		this.refs.techs.classList.toggle( 'block' );
-		this.refs.title.classList.toggle( 'hide' );
-		this.refs.curtain.classList.add( 'curtainOut' );
-		this.refs.curtain.classList.remove( 'curtainIn' );
-	}
+    if ( this.isDesktop()) {
+      this.refs.text.classList.toggle( 'block' );
+      this.refs.image.classList.toggle( 'block' );
+      this.refs.techs.classList.toggle( 'block' );
+      this.refs.title.classList.toggle( 'hide' );
+      this.refs.curtain.classList.add( 'curtainOut' );
+      this.refs.curtain.classList.remove( 'curtainIn' );
+	  }
+  }
 
   render() {
     const baseClass = 'portfolio__content';
@@ -78,7 +87,7 @@ export default class Tile extends Component {
             <div
               ref="techs"
               className={ baseClass + '--tile-techs' }>
-              { techTilesBuilder( techs ) }
+              { techTilesBuilder( techs, this.isDesktop()) }
             </div>
           </div>
           <div

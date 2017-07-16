@@ -46,6 +46,6 @@
 	@if ($delay) {
 		animation:  blink 1s infinite, stopBlink 1s linear $delay 1 forwards;				
 	} @else {
-		 animation: blink 1s infinite
+		 animation: blink 1s infinite;
 	}
 }

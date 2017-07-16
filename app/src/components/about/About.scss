@@ -8,9 +8,9 @@
   box-shadow: 1px 0 2px $silver, -1px 0 2px $silver;
   color: whitesmoke;
   font-family: 'Fira Mono';
+  margin: 25px auto;
   min-height: 400px;
   position: relative;
-  top: 30px;
 
   &:before {
     border-top: 30px solid $silver;    				

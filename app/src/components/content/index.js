@@ -7,7 +7,7 @@ export default class Content extends Component {
     return (
       <section
         id="projects"
-        className="section portfolio__content">
+        className="portfolio__content">
 				{tileBuilder}
 			</section>
     );
