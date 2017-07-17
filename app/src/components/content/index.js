@@ -6,7 +6,7 @@ export default class Content extends Component {
   render() {
     return (
       <section
-        id="projects"
+        id="content"
         className="portfolio__content">
 				{tileBuilder}
 			</section>

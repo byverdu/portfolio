@@ -10,7 +10,7 @@ export default class About extends Component {
     const baseClass = 'portfolio__window';
     return (
       <section
-        id="section"
+        id="about"
         className={ baseClass }>
         <div className={ baseClass + '--controls'}>
 					<div className="control-red"></div>

@@ -7,7 +7,7 @@ export default class Footer extends Component {
   }
   render() {
     return(
-      <footer className="portfolio__footer">
+      <footer id="social" className="portfolio__footer">
         <nav className="portfolio__footer--social">
           { socialBuilder }
         </nav>
