@@ -13,7 +13,7 @@ export default class FooterItem extends Component {
       href, id, viewBox, path
     } = this.state.data;
     return(
-      <a href={ href }>
+      <a className="portfolio__footer--link" href={ href }>
         <Icon data={{id, viewBox, path}} />
       </a>
     );

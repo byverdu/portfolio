@@ -78,9 +78,7 @@ const socialBuilder = data.socialIconsData.map(( item, index ) => {
     path: item.path
   }
   return(
-    <li key={ index }>
-      <FooterItem data={ data } />
-    </li>
+    <FooterItem key={ index } data={ data } />
   );
 });
 

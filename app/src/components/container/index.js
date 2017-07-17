@@ -15,8 +15,8 @@ export default class App extends Component {
 					<About />
 					<Content />
 					<Contact />
-					<Footer />		
 				</section>
+				<Footer />
 			</main>
     );
   }
