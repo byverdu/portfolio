@@ -62,7 +62,8 @@ const formBuilder = data.formData.map(( item, index ) => {
     label: item.label, 
     type: item.type,
     placeholder: item.placeholder,
-    name: item.name
+    name: item.name,
+    required: item.required
   };
   return(
     <Input key={ index } data={data} />

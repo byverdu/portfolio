@@ -19,10 +19,10 @@ body {
 .block {
   visibility: visible !important;
   opacity: 1 !important;
-  transition: all 4s ease;
+  transition: visibility opacity 4s ease;
 }
 .hide {
   visibility: hidden !important;
   opacity: 0 !important;
-  transition: all 1s ease;
+  transition: visibility opacity 1s ease;
 }

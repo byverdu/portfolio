@@ -10,12 +10,12 @@ export default class Input extends Component {
 
   render() {
     const {
-      label, type, placeholder, name
+      label, type, placeholder, name, required
     } = this.state.data;
     return(
-      <label htmlFor={name}>
-				<span> {label} </span>
-				<input id={name} type={type} placeholder={placeholder} />
+      <label className="portfolio__contact--form-label" htmlFor={name}>
+				<span className="portfolio__contact--form-span"> {label} </span>
+				<input className="portfolio__contact--form-input" id={name} required={required} type={type} placeholder={placeholder} />
 			</label>
     );
   }

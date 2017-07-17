@@ -30,21 +30,21 @@
           color: $white;
           outline-color: $white;
           transform: rotate(0deg);
-          transition: all 2s;          
+          transition: visibility opacity 2s;          
         }
         &-clicked {
           color: $goldenBtn;
           outline-color: $goldenBtn;
           transform: rotate(90deg);
-          transition: all 2s;
+          transition: visibility opacity 2s;
         }
         &-hidden {
           display: none;
-          transition: all 2s;          
+          transition: visibility opacity 2s;          
         }
         &-block {
           display: block;
-          transition: all 2s;          
+          transition: visibility opacity 2s;          
         }
       }
 			

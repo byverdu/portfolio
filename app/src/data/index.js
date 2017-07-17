@@ -83,19 +83,22 @@ const formData = [
 		label: 'Name', 
 		type: 'text',
 		placeholder: 'Your name',
-		name: 'name'
+    name: 'name',
+    required: true
 	},
 	{
 		label: 'Surname', 
 		type: 'text',
 		placeholder: 'Your surname',
-		name: 'surname'
+    name: 'surname',
+    required: false
 	},
 	{
 		label: 'Email', 
 		type: 'mail',
 		placeholder: 'Your email',
-		name: 'email'
+    name: 'email',
+    required: true
 	}
 ];
 

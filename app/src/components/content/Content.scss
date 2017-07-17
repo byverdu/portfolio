@@ -6,9 +6,10 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin: 50px auto;
+  margin: 35px auto;
   position: relative;
   text-align: center;
+  max-width: 600px;  
   &--tile {
     flex-basis: 50%;
     height: 300px;
@@ -22,7 +23,6 @@
       flex-direction: column;
       height: 300px;
       position: absolute;
-      border: 1px solid $purple;
     }
     &-bg {
       height: 300px;
@@ -31,7 +31,6 @@
     &-title {
       font-size: 2.5rem;
       font-weight: bolder;
-      transition: all 1s ease;
       transform: translateY(30px);
     }
     &-text {
@@ -39,7 +38,6 @@
       font-size: 1.2rem;
       padding: 13px;
       transform: translateY(70px);      
-      transition: all 1s ease;
     }
     &-image {
       display: none;
@@ -47,7 +45,6 @@
       height: 150px;
       object-fit: contain;
       opacity: 0; 
-      transition: visibility 1s ease;
       visibility: hidden;
       width: 150px;
     }
@@ -55,8 +52,7 @@
       align-self: center;
       bottom: 20px;
       display: flex;
-      position: absolute;
-      transition: visibility 1s ease;               
+      position: absolute;              
       .tech {
         border-top: 5px solid;
         border-left: 5px solid;
@@ -105,21 +101,26 @@
 
   .portfolio__content {
     flex-direction: row;
-    margin: 0 auto;
+    margin: 50px auto;
     max-width: 1200px;
     &--tile {
-      margin: 0;      
+      margin: 0;
+      &-wrapper {
+        border: 1px solid $purple;
+      }
       &-title {
         font-size: 2.8rem;
         opacity: 1;
         transform: translateY(125px);
         visibility: visible;
+        transition: opacity visibility 1s ease;        
       }
       &-text {
         opacity: 0;
         position: absolute;
         top: -30px;
         visibility: hidden;
+        transition: opacity visibility 1s ease;        
       }
       &-techs {
         bottom: 30px;
@@ -127,6 +128,7 @@
         visibility: hidden;
         flex-wrap: wrap;
         justify-content: space-between;         
+        transition: opacity visibility 1s ease;        
         .tech {
           margin: 10px;
         }
