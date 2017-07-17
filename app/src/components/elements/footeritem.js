@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Icon from './icon';
 export default class FooterItem extends Component {
   constructor( props ) {
     super( props );
@@ -8,19 +8,13 @@ export default class FooterItem extends Component {
     };
   }
 
-  markup( image ) {
-    return {
-      __html: image
-    }
-  }
-
   render() {
     const {
-      href, image
+      href, id, viewBox, path
     } = this.state.data;
     return(
       <a href={ href }>
-        <div dangerouslySetInnerHTML={ this.markup( image ) }></div>
+        <Icon data={{id, viewBox, path}} />
       </a>
     );
   }

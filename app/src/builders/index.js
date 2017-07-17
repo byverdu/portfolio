@@ -73,7 +73,9 @@ const formBuilder = data.formData.map(( item, index ) => {
 const socialBuilder = data.socialIconsData.map(( item, index ) => {
   const data = {
     href: item.href,
-    image: item.image
+    id: item.id,
+    viewBox: item.viewBox,
+    path: item.path
   }
   return(
     <li key={ index }>
