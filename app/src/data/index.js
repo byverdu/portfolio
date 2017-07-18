@@ -21,7 +21,7 @@ const navLinksData = [
 const projectsData = [
 	{
 		title: 'PrettyFormError',
-		img: 'https://cdn2.iconfinder.com/data/icons/toolbar-signs-4/512/html_code-512.png',
+		img: './media/pretty.png',
 		text: 'Js plugin to unify styles in form errors',
 		href: 'https://byverdu.github.io/prettyFormError/',
 		name: 'pretty',
@@ -31,7 +31,7 @@ const projectsData = [
 	},
 	{
 		title: 'Twitter Clone',
-		img: 'http://chitter-byver.herokuapp.com/images/chitter.gif',
+		img: './media/twitter.png',
 		text: 'The name says everything',
 		href: 'http://twitter.byverdu.es/',
 		name: 'twitter',
@@ -41,7 +41,7 @@ const projectsData = [
 	},
 	{
 		title: 'LottoApp',
-		img: 'https://igravloto.ru/images/euromillions.png',
+		img: './media/lotto.png',
 		text: 'Web app to save your euromillions raffles',
 		href: 'https://github.com/byverdu/lottoApp-backEnd',
 		name: 'lotto',
@@ -51,7 +51,7 @@ const projectsData = [
 	},
 	{
 		title: 'Residencia Ergos',
-		img: 'http://i.dailymail.co.uk/i/pix/2015/05/17/23/28CACAC800000578-3085621-image-m-29_1431900739565.jpg',
+		img: './media/resi.png',
 		text: 'Elderly home in Barcelona, web design and coding, web hosting, server maintenance.',
 		href: 'http://residenciaergos.com/#/',
 		name: 'resi',
@@ -61,7 +61,7 @@ const projectsData = [
 	},
 	{
 		title: 'ImdbApp',
-		img: 'http://www.userlogos.org/files/logos/jumpordie/imdb-iphone.png',
+		img: './media/imdb.png',
 		text: 'App as a POC used as an example for a post on my blog to explain the MEAN stack',
 		href: 'https://github.com/byverdu/meanStackPost',
 		name: 'imdb',

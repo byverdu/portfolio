@@ -41,12 +41,6 @@
     }
     &-image {
       display: none;
-      align-self: center;
-      height: 150px;
-      object-fit: contain;
-      opacity: 0; 
-      visibility: hidden;
-      width: 150px;
     }
     &-techs {
       align-self: center;
@@ -116,22 +110,36 @@
         transition: opacity visibility 1s ease;        
       }
       &-text {
+        background: $purple;
         opacity: 0;
         position: absolute;
         top: -30px;
         visibility: hidden;
-        transition: opacity visibility 1s ease;        
+        transition: opacity visibility 1s ease;
+        width: 95%;
+        z-index: 9999;
       }
       &-techs {
-        bottom: 30px;
+        background: $purple;
+        bottom: 0;
         opacity: 0;
         visibility: hidden;
         flex-wrap: wrap;
         justify-content: space-between;         
-        transition: opacity visibility 1s ease;        
+        transition: opacity visibility 1s ease;  
         .tech {
           margin: 10px;
         }
+      }
+      &-image {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        height: 300px;
+        position: absolute;
+        opacity: 0; 
+        visibility: hidden;
+        filter: opacity(.7);
       }
     }
   }

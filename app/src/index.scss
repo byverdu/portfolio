@@ -9,11 +9,11 @@ body {
 }
 
 .curtainIn {
-  animation: curtainIn 1s linear forwards;
+  animation: curtainIn .1s linear forwards;
 }
 
 .curtainOut {
-  animation: curtainOut 1s linear forwards;
+  animation: curtainOut .5s linear forwards;
 }
 
 .block {

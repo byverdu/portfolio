@@ -39,6 +39,7 @@
       color: $white;
       font-size: 1rem;
       width: 75%;
+      max-width: 600px;
       &:hover {
         cursor: pointer;
       }
@@ -47,7 +48,7 @@
   &--image {
     display: none;
     width: 160px;
-    height: 210px;
+    height: 190px;
     border: 8px solid $goldenBtn;
     border-radius: 25%;
   }
@@ -67,11 +68,11 @@
     }
     &--image {
       display: inline-flex;
-      margin: 0 auto;
+      margin: 15px auto;
       background-image: url("https://pbs.twimg.com/profile_images/565890908088836096/D1SvBrOz_400x400.jpeg");
       background-repeat: no-repeat;
-      background-position-x: -37px;
-      background-size: 210px;
+      background-position: -34px;
+      background-size: 200px;
     }
   }
 }
