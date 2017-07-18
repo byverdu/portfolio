@@ -3,7 +3,7 @@ import { printContent } from '../../utils';
 import './About.css';
 export default class About extends Component {
   componentDidMount() {
-    const timers = [ 2000, 15000, 28000, 35000 ];
+    const timers = [ 1000, 17000, 32100, 40000 ];
     printContent( this.refs.content, timers );
   }
   render() {
