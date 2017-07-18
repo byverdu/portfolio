@@ -1,0 +1,102 @@
+@import '../../__scss/colors.scss';
+@import '../../__scss/animations.scss';
+@import '../../__scss/mixins.scss';
+
+.portfolio__window {
+  background: black;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 1px 0 2px $silver, -1px 0 2px $silver;
+  color: whitesmoke;
+  font-family: 'Fira Mono';
+  margin: 25px auto;
+  min-height: 400px;
+  position: relative;
+  width: 100%;  
+
+  &:before {
+    border-top: 30px solid $silver;    				
+    border-radius: 5px 5px 0 0;
+    content: "|";
+    color: transparent;
+    height: 0px;
+    position: absolute;
+    top: -30px;
+    width: calc(100% + 2px);
+    right: -1px;
+  }
+
+  &--controls {
+    display: flex;
+    padding-left: 15px;
+    position: absolute;
+    width: 100px;
+    top: -24px;
+    height: 15px;
+
+    div[class*="control"] {
+      border-radius: 50%;
+      height: 15px;
+      width: 15px;
+      margin-right: 8px;
+    }
+
+    .control-green {
+      background: $greenBtn;
+    }
+
+    .control-red {
+      background: $redBtn;
+    }
+
+    .control-orange {
+      background: $goldenBtn;
+    }
+  }
+
+  &--content {
+    padding: 25px 15px;
+    line-height: 25px;
+
+    &-item {
+      &:before {
+        content: "> ";
+        font-style: normal;
+      }
+    }
+
+    &-0 {
+      margin-bottom: 10px;
+      &:after {
+        @include afterAnimation(15s);
+      }	
+    }
+
+    &-1 {
+      margin-bottom: 10px;
+      &:after {
+        @include afterAnimation(15s);
+      }	
+    }
+
+    &-2 {
+      margin-bottom: 10px;
+      font-style: italic;
+      &:after {
+        @include afterAnimation(5s);
+      }
+    }
+    &-3 {
+      color: rgb(41,207,66);
+      &:after {
+        @include afterAnimation(false);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .portfolio__window {
+    min-height: 270px;
+    max-width: 600px;
+  }
+}

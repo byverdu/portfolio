@@ -1,3 +1,7 @@
 node_modules/
-sessions/
 npm-debug.log
+portfolio_old/
+package-lock.json
+
+# styles
+app/src/**/*.css

@@ -1,0 +1,78 @@
+@import '../../__scss/colors.scss';
+@import '../../__scss/animations.scss';
+
+.portfolio__contact {
+  display: flex;
+  flex-direction: column;
+  margin: 35px auto;
+  max-width: 600px;
+  &--title {
+    color: $goldenBtn;
+    font: 1.5rem 'Monoton';
+    word-spacing: 10px;
+  }
+  &--form {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    &-label {
+      display: inline-flex;
+      margin: 10px 0;
+    }
+    &-span {
+      flex-basis: 25%;
+      font-size: 1.2rem;
+    }
+    &-input {
+      flex-basis: 50%;
+      padding: 5px;
+      border: 0;
+      &:focus {
+        outline-color: $pink;
+      }
+    }
+    &-btn {
+      padding: 5px;
+      margin: 15px auto;
+      border: 0;
+      background: $pink;
+      color: $white;
+      font-size: 1rem;
+      width: 75%;
+      max-width: 600px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  &--image {
+    display: none;
+    width: 160px;
+    height: 190px;
+    border: 8px solid $goldenBtn;
+    border-radius: 25%;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .portfolio__contact {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 50px auto;    
+    &--form {
+      flex-grow: 1;
+      &-btn {
+        margin: 15px auto 0;
+      }
+    }
+    &--image {
+      display: inline-flex;
+      margin: 15px auto;
+      background-image: url("https://pbs.twimg.com/profile_images/565890908088836096/D1SvBrOz_400x400.jpeg");
+      background-repeat: no-repeat;
+      background-position: -34px;
+      background-size: 200px;
+    }
+  }
+}

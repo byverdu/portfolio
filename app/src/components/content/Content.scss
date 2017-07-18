@@ -1,0 +1,153 @@
+@import '../../__scss/colors.scss';
+@import '../../__scss/animations.scss';
+@import '../../__scss/mixins.scss';
+
+.portfolio__content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 35px auto;
+  position: relative;
+  text-align: center;
+  max-width: 600px;  
+  &--tile {
+    flex-basis: 50%;
+    height: 300px;
+    margin: 15px 0;
+    a {
+      color: $white;				
+      text-decoration: none;
+    }
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 300px;
+      position: absolute;
+    }
+    &-bg {
+      height: 300px;
+      display: block;
+    }
+    &-title {
+      font-size: 2.5rem;
+      font-weight: bolder;
+      transform: translateY(30px);
+    }
+    &-text {
+      align-self: center;
+      font-size: 1.2rem;
+      padding: 13px;
+      transform: translateY(70px);      
+    }
+    &-image {
+      display: none;
+    }
+    &-techs {
+      align-self: center;
+      bottom: 20px;
+      display: flex;
+      position: absolute;              
+      .tech {
+        border-top: 5px solid;
+        border-left: 5px solid;
+        box-shadow: 1px 0 1px;
+        width: 50px;
+        padding: 5px;
+        text-align: center;
+        margin: 0 10px;
+        position: relative;
+        &:before {
+          content: '\005C';
+          color: $black;
+          font-size: 8px;
+          left: -5px;
+          position: absolute;
+          top: -7px;
+          transform: rotate(-18deg);
+        }
+      }
+    }
+  }
+  
+  .tile {
+    &-pretty {
+      background: $goldenBtn;
+    }
+    &-twitter {
+      background: $orange;
+    }
+    &-lotto {
+      background: $redBtn;
+    }
+    &-resi {
+      background: $blue;
+    }
+    &-imdb {
+      background: $greenBtn;
+    }
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .portfolio .wrapper {
+    margin: 0 10%;
+  }
+
+  .portfolio__content {
+    flex-direction: row;
+    margin: 50px auto;
+    max-width: 1200px;
+    &--tile {
+      margin: 0;
+      &-wrapper {
+        border: 1px solid $purple;
+      }
+      &-title {
+        font-size: 2.8rem;
+        opacity: 1;
+        transform: translateY(125px);
+        visibility: visible;
+        transition: opacity visibility 1s ease;        
+      }
+      &-text {
+        background: $purple;
+        opacity: 0;
+        position: absolute;
+        top: -30px;
+        visibility: hidden;
+        transition: opacity visibility 1s ease;
+        width: 95%;
+        z-index: 9999;
+      }
+      &-techs {
+        background: $purple;
+        bottom: 0;
+        opacity: 0;
+        visibility: hidden;
+        flex-wrap: wrap;
+        justify-content: space-between;         
+        transition: opacity visibility 1s ease;  
+        .tech {
+          margin: 10px;
+        }
+      }
+      &-image {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        height: 300px;
+        position: absolute;
+        opacity: 0; 
+        visibility: hidden;
+        filter: opacity(.7);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .portfolio__content--tile-title {
+    font-size: 3.5rem;
+    transform: translateY(120px);    
+  }
+}

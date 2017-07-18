@@ -1,0 +1,28 @@
+@import './__scss/reset.scss';
+@import './__scss/colors.scss';
+@import './__scss/animations.scss';
+// global styles
+
+body {
+	font: 15px 'Bubbler One', sans-serif;
+	background: $purple;
+}
+
+.curtainIn {
+  animation: curtainIn .1s linear forwards;
+}
+
+.curtainOut {
+  animation: curtainOut .5s linear forwards;
+}
+
+.block {
+  visibility: visible !important;
+  opacity: 1 !important;
+  transition: visibility opacity 4s ease;
+}
+.hide {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  transition: visibility opacity 1s ease;
+}
