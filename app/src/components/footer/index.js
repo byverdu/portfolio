@@ -11,7 +11,7 @@ export default class Footer extends Component {
         <nav className="portfolio__footer--social">
           { socialBuilder }
         </nav>
-        <p className="portfolio__footer--copy">Made with <span>&lt;3</span> by Byverdu <b ref="year"></b></p>
+        <p className="portfolio__footer--copy">Made with <span>&lt;3</span> by Byverdu, <b ref="year"></b></p>
       </footer>
     );
   }
