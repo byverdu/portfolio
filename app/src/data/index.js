@@ -95,7 +95,7 @@ const formData = [
 	},
 	{
 		label: 'Email', 
-		type: 'mail',
+		type: 'email',
 		placeholder: 'Your email',
     name: 'email',
     required: true

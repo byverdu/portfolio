@@ -9,13 +9,15 @@ export default class Input extends Component {
   }
 
   render() {
+    const baseClass = 'portfolio__contact--form';
     const {
       label, type, placeholder, name, required
     } = this.state.data;
+    const asterisk = required ? <b className={ baseClass + "-mark"}>*</b> : null;
     return(
-      <label className="portfolio__contact--form-label" htmlFor={name}>
-				<span className="portfolio__contact--form-span"> {label} </span>
-				<input className="portfolio__contact--form-input" id={name} required={required} type={type} placeholder={placeholder} />
+      <label className={ baseClass + "-label" } htmlFor={name}>
+				<span className={ baseClass + "-span"}> {label} { asterisk }</span>
+				<input className={ baseClass + "-input" } id={name} required={required} type={type} placeholder={placeholder} />
 			</label>
     );
   }
