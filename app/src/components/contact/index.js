@@ -11,22 +11,27 @@ export default class Contact extends Component {
   }
 
   handleClick( event ) {
-    event.preventDefault();
     const errors = this.refs.form.querySelectorAll( 'input:invalid' );
-    const className = 'portfolio__contact--form-error';
 
-    this.deletePrevErrors( className );
+    if ( errors.length > 0 ) {
+      event.preventDefault();
+      const className = 'portfolio__contact--form-error';
 
-    [].forEach.call( errors, item => {
-      const error = document.createElement( 'span' );
-      error.textContent = item.validationMessage;
-      error.classList.add( className )
-      item.parentElement.insertAdjacentElement( 'afterend', error );
-    });
-
-    setTimeout(() => {
       this.deletePrevErrors( className );
-    }, 5000 );
+
+      [].forEach.call( errors, item => {
+        const error = document.createElement( 'span' );
+        error.textContent = item.validationMessage;
+        error.classList.add( className )
+        item.parentElement.insertAdjacentElement( 'afterend', error );
+      });
+
+      errors[ 0 ].focus();
+
+      setTimeout(() => {
+        this.deletePrevErrors( className );
+      }, 5000 );
+    }
   }
 
   render() {
