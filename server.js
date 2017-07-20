@@ -10,7 +10,7 @@ app.use(Express.static(path.join(__dirname, 'app/build')))
 
 app.post('/', (req, res) => {
   console.log(req,res)
-  res.sendFile(path.join(__dirname, 'app/build/xoxo.html'));
+  res.sendFile(path.join(__dirname, 'app/build/success.html'));
 });
 
 app.get('/', (req, res) => {

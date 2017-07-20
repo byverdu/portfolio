@@ -17,7 +17,13 @@ export default class Input extends Component {
     return(
       <label className={ baseClass + "-label" } htmlFor={name}>
 				<span className={ baseClass + "-span"}> {label} { asterisk }</span>
-				<input className={ baseClass + "-input" } id={name} required={required} type={type} placeholder={placeholder} />
+				<input
+          className={ baseClass + "-input" }
+          id={name}
+          name={name}
+          required={required}
+          type={type}
+          placeholder={placeholder} />
 			</label>
     );
   }
