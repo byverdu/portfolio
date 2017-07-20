@@ -11,7 +11,7 @@ export default class Contact extends Component {
   }
 
   handleClick( event ) {
-    const errors = this.refs.form.querySelectorAll( 'input:invalid' );
+    const errors = this.refs.form.querySelectorAll( 'input:invalid, textarea:invalid' );
 
     if ( errors.length > 0 ) {
       event.preventDefault();
