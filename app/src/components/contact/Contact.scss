@@ -31,12 +31,35 @@
         outline-color: $pink;
       }
     }
+    &-mark {
+      color: $pink;
+      position: relative;
+      top: -5px;
+    }
+    &-error {
+      background: $pink;
+      color: $white;
+      margin: 5px auto;
+      text-align: center;
+      padding: 5px 20px;
+      position: relative;
+      &:before {
+        content: '';
+        border-top: 20px solid transparent;
+        border-bottom: 10px solid $pink;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        position: absolute;
+        top: -30px;
+        left: 0;
+      }
+    }
     &-btn {
       padding: 5px;
       margin: 15px auto;
       border: 0;
-      background: $pink;
-      color: $white;
+      background: $goldenBtn;
+      color: $black;
       font-size: 1rem;
       width: 75%;
       max-width: 600px;
@@ -51,6 +74,9 @@
     height: 190px;
     border: 8px solid $goldenBtn;
     border-radius: 25%;
+  }
+  textarea {
+    resize: none;
   }
 }
 

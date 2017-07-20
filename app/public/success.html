@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=yes">
+  <link rel="shortcut icon" href="/media/favicon.ico">
+  <title>Byverdu Portfolio</title>
+  <style>
+    body {
+      background: rgb(31,31,69);
+    }
+    .success {
+      font: 1.5rem "Fira Mono";
+      color: rgb(255,189,46);
+      width: 75%;
+      margin: 0 auto;
+      text-align: center;
+      transform: translateY(200px);
+      line-height: 50px;
+    }
+    .success a {
+      text-align: left;
+      display: block;
+      color: rgb(255,62,153);
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>
+    <p>You need to enable JavaScript to run this app.</p>
+  </noscript>
+    <div class="success">
+      <a href="./">Home</a>
+      <h1 class="success-title">Your Email has been send succesfully!</h1>
+      <h3 class="success-subtitle">I'll contact you shortly...</h3>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+
+  <script>
+    WebFont.load({
+      google: {
+        families: ['Bubbler+One','Monoton','Fira+Mono']
+      }
+    });
+    document.addEventListener( 'DOMContentLoaded', () => {
+      setTimeout(() => {
+        window.location = '/';
+      }, 4000);
+    });
+  </script>
+</body>
+
+</html>
