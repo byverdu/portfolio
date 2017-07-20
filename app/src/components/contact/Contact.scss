@@ -75,6 +75,9 @@
     border: 8px solid $goldenBtn;
     border-radius: 25%;
   }
+  textarea {
+    resize: none;
+  }
 }
 
 @media screen and (min-width: 750px) {

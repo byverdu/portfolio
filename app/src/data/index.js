@@ -26,7 +26,7 @@ const projectsData = [
 		href: 'https://byverdu.github.io/prettyFormError/',
 		name: 'pretty',
     techs: [
-      'Sass', 'React', 'MEAN', 'Node'
+      'Gulp', 'ES6', 'Flow'
     ]
 	},
 	{
@@ -36,17 +36,17 @@ const projectsData = [
 		href: 'http://twitter.byverdu.es/',
 		name: 'twitter',
     techs: [
-      'Sass', 'React', 'MEAN', 'Node'
+      'ES6', 'Node', 'Grunt', 'SCSS'
     ]
 	},
 	{
 		title: 'LottoApp',
 		img: './media/lotto.png',
 		text: 'Web app to save your euromillions raffles',
-		href: 'https://github.com/byverdu/lottoApp-backEnd',
+		href: 'https://github.com/byverdu?utf8=%E2%9C%93&tab=repositories&q=lottoApp',
 		name: 'lotto',
     techs: [
-      'Sass', 'React', 'MEAN', 'Node'
+      'Aurelia', 'Ionic', 'Mongo', 'Node'
     ]
 	},
 	{
@@ -56,7 +56,7 @@ const projectsData = [
 		href: 'http://residenciaergos.com/#/',
 		name: 'resi',
     techs: [
-      'Sass', 'React', 'MEAN', 'Node'
+      'SCSS', 'React'
     ]
 	},
 	{
@@ -66,7 +66,7 @@ const projectsData = [
 		href: 'https://github.com/byverdu/meanStackPost',
 		name: 'imdb',
     techs: [
-      'Sass', 'React', 'MEAN', 'Node'
+      'MEAN'
     ]
 	}
 ];
@@ -80,24 +80,27 @@ const aboutData = [
 
 const formData = [
 	{
-		label: 'Name', 
+    tag: 'input',
+    label: 'Name', 
 		type: 'text',
 		placeholder: 'Your name',
     name: 'name',
-    required: true
-	},
-	{
-		label: 'Surname', 
-		type: 'text',
-		placeholder: 'Your surname',
-    name: 'surname',
     required: false
 	},
 	{
-		label: 'Email', 
+    tag: 'input',
+    label: 'Email', 
 		type: 'email',
 		placeholder: 'Your email',
     name: 'email',
+    required: true
+	},
+	{
+    tag: 'textarea',
+    label: 'Message', 
+		type: 'text',
+		placeholder: 'Your message',
+    name: 'message',
     required: true
 	}
 ];

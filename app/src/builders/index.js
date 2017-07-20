@@ -30,8 +30,11 @@ const techTilesBuilder = ( techData, isDesktop ) => {
   const purple = 'rgb(31,31,69)';
 
   return techData.map(( item, index ) => {
-  const random = Math.floor( Math.random() * bgColors.length );
-  const bg = isDesktop ? {color: bgColors[ random ]} : {color: purple }
+    const random = Math.floor( Math.random() * bgColors.length );
+    const bg = isDesktop ?
+      {color: bgColors[ random ]} :
+      {color: purple };
+
     return (
       <span
         key={ index }
@@ -59,6 +62,7 @@ const tileBuilder = data.projectsData.map(( item, index ) => {
 
 const formBuilder = data.formData.map(( item, index ) => {
   const data = {
+    tag: item.tag,
     label: item.label, 
     type: item.type,
     placeholder: item.placeholder,
