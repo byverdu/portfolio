@@ -2,19 +2,31 @@ import Express from 'express';
 import path from 'path';
 const bodyParser = require( 'body-parser' );
 const app = Express();
-
+import { smtpConfig, emailOpts } from './emailConfig';
+	
 // Express settings
 const port = process.env.port || 3000;
 app.use(bodyParser.urlencoded({ extended: true })); 
-app.use(Express.static(path.join(__dirname, 'app/build')))
+app.use(Express.static(path.join(__dirname, 'app/build')));
 
-app.post('/', (req, res) => {
-  console.log(req,res)
-  res.sendFile(path.join(__dirname, 'app/build/success.html'));
-});
-
+// route handler
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'app/build/index.html'));
+});
+
+app.post('/', (req, res) => {
+  smtpConfig.sendMail( emailOpts( req.body ), error => {
+    if( error ) {
+      console.log(error);
+
+      res.sendFile(path.join(__dirname, 'app/build/error.html'));
+		} else {
+    res.sendFile(path.join(__dirname, 'app/build/success.html'));
+
+		console.log('yeppppp!!!');
+		}
+  });  
+	smtpConfig.close();
 });
 
 app.listen(`${port}`, () => {
