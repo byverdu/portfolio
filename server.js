@@ -3,7 +3,6 @@ import path from 'path';
 const bodyParser = require( 'body-parser' );
 const app = Express();
 import { smtpConfig, emailOpts } from './emailConfig';
-import ReactDOMServer from 'react-dom/server'
 
 // Express settings
 const port = process.env.port || 9090;
