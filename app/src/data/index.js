@@ -43,7 +43,7 @@ const projectsData = [
 		title: 'LottoApp',
 		img: './media/lotto.png',
 		text: 'Web app to save your euromillions raffles',
-		href: 'https://github.com/byverdu?utf8=%E2%9C%93&tab=repositories&q=lottoApp',
+		href: 'http://lotto.byverdu.es/',
 		name: 'lotto',
     techs: [
       'Aurelia', 'Ionic', 'Mongo', 'Node'
