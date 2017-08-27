@@ -49,6 +49,12 @@ export function printContent( elemToAppend, timers ) {
       elemToAppend.appendChild( elem );
     return elem;
   };
+
+  function delay( timer ) {
+    return new Promise(( resolve ) => { 
+        setTimeout( resolve, timer );
+    });
+  }
   
   // adding 
   const runInterval = ( element, collection ) => {
@@ -66,13 +72,14 @@ export function printContent( elemToAppend, timers ) {
   //
   const convertedData = splitSentences( aboutData );
   for ( let counter = 0; counter < convertedData.length; counter++ ) {
-    setTimeout(() => {
-      const placeholder = document.querySelector( `.portfolio__window--content-${counter}` );
-      const tempElem = createElement( counter );
-      if ( placeholder ) {
-        placeholder.remove();
-      }
-      runInterval( tempElem, convertedData[ counter ]);
-    }, timers[ counter ]);
+    delay( timers[ counter ])
+      .then(() => {
+        const placeholder = document.querySelector( `.portfolio__window--content-${counter}` );
+        const tempElem = createElement( counter );
+        if ( placeholder ) {
+          placeholder.remove();
+        }
+        runInterval( tempElem, convertedData[ counter ]);
+      });
   }
 }
