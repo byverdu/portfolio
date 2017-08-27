@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=yes">
+  <link rel="shortcut icon" href="/media/favicon.ico">
+  <title>Byverdu Portfolio</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <noscript>
+    <p>You need to enable JavaScript to run this app.</p>
+  </noscript>
+    <div class="success">
+      <a href="./">Home</a>
+      <h1 class="success-title">Your Email has been send succesfully!</h1>
+      <h3 class="success-subtitle">I'll contact you shortly...</h3>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+
+  <script>
+    WebFont.load({
+      google: {
+        families: ['Bubbler+One','Monoton','Fira+Mono']
+      }
+    });
+    document.addEventListener( 'DOMContentLoaded', () => {
+      setTimeout(() => {
+        window.location = '/';
+      }, 4000);
+    });
+  </script>
+</body>
+
+</html>
