@@ -70,6 +70,9 @@
   }
   
   .tile {
+    &-prettyLetters {
+      background: $pink;
+    }
     &-pretty {
       background: $goldenBtn;
     }
