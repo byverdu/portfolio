@@ -20,6 +20,15 @@ const navLinksData = [
 
 const projectsData = [
 	{
+		title: 'PrettyLetters',
+		img: './media/prettyLetters.png',
+		text: 'Js plugin that will split letters in a word so they can be styled',
+		href: 'https://byverdu.github.io/prettyLetters/',
+		name: 'prettyLetters',
+    techs: [
+      'Gulp', 'ES5', 'jQuery'
+    ]
+	},{
 		title: 'PrettyFormError',
 		img: './media/pretty.png',
 		text: 'Js plugin to unify styles in form errors',
