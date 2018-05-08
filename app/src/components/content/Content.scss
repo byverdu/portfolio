@@ -68,8 +68,18 @@
       }
     }
   }
+
+  .is-mobile .portfolio__content--tile-techs .tech {
+    color: $purple !important;    
+  }
   
   .tile {
+    &-crypto {
+      background: $redNeon;
+    }
+    &-consColors {
+      background: $light-blue;
+    }
     &-prettyLetters {
       background: $pink;
     }

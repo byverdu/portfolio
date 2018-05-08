@@ -29,6 +29,8 @@ export default class Tile extends Component {
 
   getWidthElement() {
     this.refs.wrapper.style.width = `${this.refs.tile.getBoundingClientRect().width}px`;
+
+    this.isDesktop() ? this.refs.wrapper.classList.remove( 'is-mobile' ) : this.refs.wrapper.classList.add( 'is-mobile' )
   }
 
   handleMouseEnter() {
@@ -87,7 +89,7 @@ export default class Tile extends Component {
             <div
               ref="techs"
               className={ baseClass + '--tile-techs' }>
-              { techTilesBuilder( techs, this.isDesktop()) }
+              { techTilesBuilder( techs ) }
             </div>
           </div>
           <div
