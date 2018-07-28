@@ -20,6 +20,16 @@ const navLinksData = [
 
 const projectsData = [
 	{
+		title: 'Curriculum',
+		img: './media/cv.png',
+		text: 'Just a different way to present your CV',
+		href: 'https://byverdu.github.io/curriculum/',
+		name: 'curriculum',
+    techs: [
+      'ES6', 'Gulp', 'Sass', 'Prism.js'
+    ]
+  },
+  {
 		title: 'CryptoDasboard',
 		img: './media/crypto.jpg',
 		text: 'Dashboard for your crypto portfolio',
