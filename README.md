@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/byverdu/portfolio.svg?branch=master)](https://travis-ci.org/byverdu/portfolio)
+
 # Byverdu Portfolio
 
 New flavour for my portfolio, this time usin react.
