@@ -4,6 +4,7 @@
   "description": "my personal portfolio",
   "main": "server.js",
   "scripts": {
+    "predeploy": "yarn && cd app && yarn",
     "start": "babel-node server.js",
     "dev": "nodemon -e js,html --exec babel-node server.js"
   },

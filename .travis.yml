@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+  - "9"
+
+env:
+  global:
+    - NODE_ENV=development
+
+cache:
+  directories:
+    - node_modules
+
+# safelist
+branches:
+  only:
+  - master
+  - development
+
+script:
+  - yarn run predeploy
