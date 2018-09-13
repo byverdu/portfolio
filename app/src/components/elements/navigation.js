@@ -6,15 +6,15 @@ export default class Nav extends Component {
     super( props );
 
     this.handleClickMenu = this.handleClickMenu.bind( this );
+    this.button = null;
   }
   handleClickMenu() {
-    this.refs.btnMenu.classList.toggle( 'menu-clicked' );
-    
-    const listItems = document.querySelectorAll( '.menu-hidden' );
+    this.button.classList.toggle( 'button-active' );
 
-    for ( let i = 0; i < listItems.length;i++ ) {
-      listItems[ i ].classList.toggle( 'menu-block' );
-    }
+    Array.from( document.querySelectorAll( '.js-nav-item' ))
+      .forEach( elem => {
+        elem.classList.toggle( 'menu-hidden' );
+      });
   }
   render() {
     const baseClass = 'portfolio__header';
@@ -23,9 +23,9 @@ export default class Nav extends Component {
         <ul className={ baseClass + '--nav'}>
           <li className={ baseClass + '--nav-item menu'}>
             <button
-              className="button menu-idle"
+              className="button"
               onClick={ this.handleClickMenu }
-              ref="btnMenu">|||</button>
+              ref={elem => this.button = elem}>|||</button>
           </li>
           { navLinkBuilder }
         </ul>

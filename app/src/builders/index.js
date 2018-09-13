@@ -1,17 +1,18 @@
 import React from 'react';
+import classnames from 'classnames';
 import * as data from '../data';
 import Tile from '../../src/components/elements/tile';
 import Input from '../../src/components/elements/input';
 import FooterItem from '../../src/components/elements/footeritem';
 
 const navLinkBuilder = data.navLinksData.map(( item, index ) => {
-  const baseClass = 'portfolio__header--nav-';
+  const liClasses = classnames( 'portfolio__header--nav-item', 'menu-hidden', 'js-nav-item' )
   return(
     <li
-      className={baseClass + 'item menu-hidden'}
+      className={liClasses}
       key={index}>
       <a
-        className={baseClass + 'link'}
+        className={'portfolio__header--nav-link'}
         href={item.href}>
           {item.text}
       </a>
