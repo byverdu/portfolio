@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { printContent } from '../../utils';
 import './About.css';
 export default class About extends Component {
+  content = undefined;
+
   componentDidMount() {
-    const timers = [ 1000, 17000, 32100, 40000 ];
-    printContent( this.refs.content, timers );
+    printContent( this.content );
   }
   render() {
     const baseClass = 'portfolio__window';
@@ -18,7 +19,7 @@ export default class About extends Component {
 					<div className="control-green"></div>
 				</div>
 				<div
-          ref="content"
+          ref={elem => this.content = elem}
           className={ baseClass + '--content'}>
             <div className={ baseClass + '--content-item ' + baseClass + '--content-0'}></div>
         </div>

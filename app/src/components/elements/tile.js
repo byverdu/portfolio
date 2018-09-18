@@ -6,7 +6,7 @@ export default class Tile extends Component {
     super( props );
 
     this.state = {
-      data: props.data
+      data: props
     }
 
     this.handleMouseEnter = this.handleMouseEnter.bind( this );
