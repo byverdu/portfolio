@@ -1,17 +1,18 @@
 import React from 'react';
+import classnames from 'classnames';
 import * as data from '../data';
 import Tile from '../../src/components/elements/tile';
 import Input from '../../src/components/elements/input';
 import FooterItem from '../../src/components/elements/footeritem';
 
-const navLinkBuilder = data.navLinksData.map(( item, index ) => {
-  const baseClass = 'portfolio__header--nav-';
+export const navLinkBuilder = data.navLinksData.map(( item, index ) => {
+  const liClasses = classnames( 'portfolio__header--nav-item', 'menu-hidden', 'js-nav-item' )
   return(
     <li
-      className={baseClass + 'item menu-hidden'}
+      className={liClasses}
       key={index}>
       <a
-        className={baseClass + 'link'}
+        className={'portfolio__header--nav-link'}
         href={item.href}>
           {item.text}
       </a>
@@ -19,7 +20,7 @@ const navLinkBuilder = data.navLinksData.map(( item, index ) => {
   );
 });
 
-const techTilesBuilder = ( techData ) => {
+export const techTilesBuilder = ( techData ) => {
   const bgColors = [
     'rgb(254,106,8)',
     'rgb(255,189,46)',
@@ -43,50 +44,17 @@ const techTilesBuilder = ( techData ) => {
   });
 }
 
-const tileBuilder = data.projectsData.map(( item, index ) => {
-  const data = {
-    title: item.title,
-    img: item.img,
-    text: item.text,
-    href: item.href,
-    name: item.name,
-    techs: item.techs
-  }
-  return(
-    <Tile key={ index }	data={data} />
-  );
-});
-
-const formBuilder = data.formData.map(( item, index ) => {
-  const data = {
-    tag: item.tag,
-    label: item.label, 
-    type: item.type,
-    placeholder: item.placeholder,
-    name: item.name,
-    required: item.required
-  };
-  return(
-    <Input key={ index } data={data} />
+export const tileBuilder = data.projectsData.map( item => (
+    <Tile key={ item.name } {...item} />
   )
-});
+);
 
-const socialBuilder = data.socialIconsData.map(( item, index ) => {
-  const data = {
-    href: item.href,
-    id: item.id,
-    viewBox: item.viewBox,
-    path: item.path
-  }
-  return(
-    <FooterItem key={ index } data={ data } />
-  );
-});
+export const formBuilder = data.formData.map( item => (
+    <Input key={ item.name } {...item} />
+  )
+);
 
-export {
-  navLinkBuilder,
-  techTilesBuilder,
-  tileBuilder,
-  formBuilder,
-  socialBuilder
-}
+export const socialBuilder = data.socialIconsData.map( item => (
+    <FooterItem key={ item.id } {...item } />
+  )
+);

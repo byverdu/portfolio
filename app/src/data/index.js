@@ -135,8 +135,7 @@ const formData = [
 	},
 	{
     tag: 'textarea',
-    label: 'Message', 
-		type: 'text',
+    label: 'Message',
 		placeholder: 'Your message',
     name: 'message',
     required: true

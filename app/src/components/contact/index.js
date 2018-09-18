@@ -43,7 +43,9 @@ export default class Contact extends Component {
           ref="form"
           className={ baseClass + "--form"}
         >
-          <h2 className={ baseClass + "--title"} >Say hello to Albert!</h2>
+          <h2 className={ baseClass + "--title"} >
+            Say hello to Albert!
+          </h2>
           { formBuilder }
           <button
               className="portfolio__contact--form-btn"
