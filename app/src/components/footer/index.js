@@ -1,18 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { socialBuilder } from '../../builders';
 import './Footer.css';
-export default class Footer extends Component {
-  componentDidMount() {
-    this.refs.year.textContent = new Date().getFullYear();
-  }
-  render() {
-    return(
-      <footer id="social" className="portfolio__footer">
-        <nav className="portfolio__footer--social">
-          { socialBuilder }
-        </nav>
-        <p className="portfolio__footer--copy">Made with <span>&lt;3</span> by Byverdu, <b ref="year"></b></p>
-      </footer>
-    );
-  }
-}
+
+const Footer = () => (
+  <footer id="social" className="portfolio__footer">
+    <nav className="portfolio__footer--social">
+      { socialBuilder }
+    </nav>
+    <p className="portfolio__footer--copy">Made with <span>&lt;3</span> by Byverdu, <b>{new Date().getFullYear()}</b></p>
+  </footer>
+);
+
+export default Footer;

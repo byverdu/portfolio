@@ -5,15 +5,19 @@ export default class Tile extends Component {
   constructor( props ) {
     super( props );
 
-    this.state = {
-      data: props.data
-    }
-
     this.handleMouseEnter = this.handleMouseEnter.bind( this );
     this.handleMouseLeave = this.handleMouseLeave.bind( this );
     this.getWidthElement = this.getWidthElement.bind( this );
     this.isDesktop = this.isDesktop.bind( this );
+
   }
+  tile = React.createRef();
+  wrapper = React.createRef();
+  title = React.createRef();
+  text = React.createRef();
+  image = React.createRef();
+  techs = React.createRef();
+  curtain = React.createRef();
   componentDidMount() {
     this.getWidthElement();
     window.addEventListener( 'resize', this.getWidthElement );
@@ -28,28 +32,33 @@ export default class Tile extends Component {
   }
 
   getWidthElement() {
-    this.refs.wrapper.style.width = `${this.refs.tile.getBoundingClientRect().width}px`;
+    const wrapper = this.wrapper.current
+    wrapper.style.width = `${this.tile.current.getBoundingClientRect().width}px`;
+
+    this.isDesktop() ?
+      wrapper.classList.remove( 'is-mobile' ) : 
+      wrapper.classList.add( 'is-mobile' )
   }
 
   handleMouseEnter() {
     if ( this.isDesktop()) {
-      this.refs.text.classList.toggle( 'block' );
-      this.refs.image.classList.toggle( 'block' );
-      this.refs.techs.classList.toggle( 'block' );
-      this.refs.title.classList.toggle( 'hide' );
-      this.refs.curtain.classList.remove( 'curtainOut' );
-      this.refs.curtain.classList.add( 'curtainIn' );
+      this.text.current.classList.toggle( 'block' );
+      this.image.current.classList.toggle( 'block' );
+      this.techs.current.classList.toggle( 'block' );
+      this.title.current.classList.toggle( 'hide' );
+      this.curtain.current.classList.remove( 'curtainOut' );
+      this.curtain.current.classList.add( 'curtainIn' );
     }
 	}
 
   handleMouseLeave() {
     if ( this.isDesktop()) {
-      this.refs.text.classList.toggle( 'block' );
-      this.refs.image.classList.toggle( 'block' );
-      this.refs.techs.classList.toggle( 'block' );
-      this.refs.title.classList.toggle( 'hide' );
-      this.refs.curtain.classList.add( 'curtainOut' );
-      this.refs.curtain.classList.remove( 'curtainIn' );
+      this.text.current.classList.toggle( 'block' );
+      this.image.current.classList.toggle( 'block' );
+      this.techs.current.classList.toggle( 'block' );
+      this.title.current.classList.toggle( 'hide' );
+      this.curtain.current.classList.add( 'curtainOut' );
+      this.curtain.current.classList.remove( 'curtainIn' );
 	  }
   }
 
@@ -57,42 +66,47 @@ export default class Tile extends Component {
     const baseClass = 'portfolio__content';
     const {
       title, img, text, href, name, techs
-    } = this.state.data;
+    } = this.props;
     
     return(
-      <div ref="tile" className={ baseClass + '--tile' }>
+      <div
+        ref={this.tile}
+        className={ baseClass + '--tile' }
+      >
         <a href={ href }>
           <div
+            ref={this.wrapper}
             onMouseEnter={this.handleMouseEnter}
             onMouseLeave={this.handleMouseLeave}
-            ref="wrapper"
             className={ baseClass + '--tile-wrapper' }
           >
             <h4
-              ref="title"
+              ref={this.title}
               className={ baseClass + '--tile-title' }>
               { title }
             </h4>
             <p
-              ref="text"
+              ref={this.text}
               className={ baseClass + '--tile-text' }>
               { text }
             </p>
             <img
+              ref={this.image}
               alt={ title + 'project image' }
-              ref="image"
               className={ baseClass + '--tile-image' }
               src={ img } 
             />
             <div
-              ref="techs"
-              className={ baseClass + '--tile-techs' }>
-              { techTilesBuilder( techs, this.isDesktop()) }
+              ref={this.techs}
+              className={ baseClass + '--tile-techs' }
+            >
+              { techTilesBuilder( techs ) }
             </div>
           </div>
           <div
-            ref="curtain"
-            className={ baseClass + "--tile-bg tile-" + name}></div>
+            ref={this.curtain}
+            className={ baseClass + "--tile-bg tile-" + name}
+          />
         </a>
       </div>
     );

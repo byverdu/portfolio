@@ -74,7 +74,7 @@
     &-1 {
       margin-bottom: 10px;
       &:after {
-        @include afterAnimation(15s);
+        @include afterAnimation(12s);
       }	
     }
 

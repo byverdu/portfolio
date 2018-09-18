@@ -20,6 +20,25 @@ const navLinksData = [
 
 const projectsData = [
 	{
+		title: 'CryptoDasboard',
+		img: './media/crypto.jpg',
+		text: 'Dashboard for your crypto portfolio',
+		href: 'https://github.com/byverdu/crypto-dashboard',
+		name: 'crypto',
+    techs: [
+      'React', 'Redux', 'ES6', 'Node'
+    ]
+	},
+	{
+		title: 'ConsColor',
+		img: './media/conscolor.png',
+		text: 'Yet another npm package that prints colors in your console',
+		href: 'https://github.com/byverdu/consColors/',
+		name: 'consColors',
+    techs: [
+      'Node'
+    ]
+	},{
 		title: 'PrettyLetters',
 		img: './media/prettyLetters.png',
 		text: 'Js plugin that will split letters in a word so they can be styled',
@@ -106,8 +125,7 @@ const formData = [
 	},
 	{
     tag: 'textarea',
-    label: 'Message', 
-		type: 'text',
+    label: 'Message',
 		placeholder: 'Your message',
     name: 'message',
     required: true
