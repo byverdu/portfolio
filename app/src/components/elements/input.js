@@ -1,48 +1,37 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class Input extends Component {
-  constructor( props ) {
-    super( props );
-    this.state = {
-      data: props
-    }
+const baseClass = 'portfolio__contact--form';
+const InputTag = props => ( <input {...props} /> );
+const TextareaTag = props => ( <textarea {...props} /> );
+const Asterisk = ({required}) => required && <b className={ baseClass + "-mark"}>*</b>;
+
+const tagBuilder = ( props ) => {
+  const data = {
+    type: props.type,
+    placeholder: props.placeholder,
+    name: props.name,
+    id: props.name,
+    required: props.required,
+    className: `${baseClass}-input`
   }
 
-  tagBuilder( data, baseClass ) {
-    const {
-      tag, type, placeholder, name, required
-    } = this.state.data;
-
-    return tag === 'input' ?
-    <input
-          className={ baseClass + "-input" }
-          id={name}
-          name={name}
-          required={required}
-          type={type}
- placeholder={placeholder} /> : 
-
-    <textarea
-          className={ baseClass + "-input" }
-          id={name}
-          name={name}
-          required={required}
-          type={type}
-          placeholder={placeholder} ></textarea>
-
-  }
-
-  render() {
-    const baseClass = 'portfolio__contact--form';
-    const {
-      label, name, required
-    } = this.state.data;
-    const asterisk = required ? <b className={ baseClass + "-mark"}>*</b> : null;
-    return(
-      <label className={ baseClass + "-label" } htmlFor={name}>
-				<span className={ baseClass + "-span"}> {label} { asterisk }</span>
-				{ this.tagBuilder( this.state.data, `${baseClass}` ) }
-			</label>
-    );
-  }
+  return props.tag === 'input' ?
+    <InputTag {...data} /> : 
+    <TextareaTag {...data} />;
 }
+
+const Input = props => (
+  <label
+    className={ baseClass + "-label" }
+    htmlFor={props.name}
+  >
+    <span
+      className={ baseClass + "-span"}
+    > 
+      {props.label} { <Asterisk {...props} /> }
+    </span>
+    { tagBuilder( props ) }
+  </label>
+);
+
+export default Input;
