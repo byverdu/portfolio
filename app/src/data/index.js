@@ -19,6 +19,16 @@ const navLinksData = [
 ];
 
 const projectsData = [
+  {
+		title: 'Expenses Calculator',
+		img: './media/calculator.png',
+		text: 'App to check if you (and couple) earn enough money to afford your life style',
+		href: 'https://byverdu.github.io/household-expenses-calculator/',
+		name: 'calculator',
+    techs: [
+      'React'
+    ]
+	},
 	{
 		title: 'Curriculum',
 		img: './media/cv.png',
@@ -95,16 +105,6 @@ const projectsData = [
 		name: 'resi',
     techs: [
       'SCSS', 'React'
-    ]
-	},
-	{
-		title: 'ImdbApp',
-		img: './media/imdb.png',
-		text: 'App as a POC used as an example for a post on my blog to explain the MEAN stack',
-		href: 'https://github.com/byverdu/meanStackPost',
-		name: 'imdb',
-    techs: [
-      'MEAN'
     ]
 	}
 ];
